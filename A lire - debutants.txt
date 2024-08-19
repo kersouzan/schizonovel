@@ -1,13 +1,13 @@
 Pour débuter, il vous faut un client git.
 C'est un logiciel qui permet de synchroniser les fichiers du projets entre tous les participants sans qu'il n'y ait de conflit de modification.
 
-Clients git par exemple:
+Exemples de clients git:
 - github Desktop
 - turtoise git
 - gitkraken
 
 Une fois le client git installé, il vous faut faire un clone du dépôt sur votre ordinateur.
 Pour cela, choisir "cloner un dépôt" avec l'adresse "https://github.com/kersouzan/schizonovel" et choisir le dossier sur votre machine où cloner le dépôt.
-Une fois le dépôt cloné sur votre ordinateur, vous pouvez lancer Ren'Py à partir du dossier "Ren'Py- xxx -dsk".
+Une fois le dépôt cloné sur votre ordinateur, vous pouvez lancer Ren'Py à partir du dossier "Ren'Py- xxx -sdk".
 
 Vous voilà prêts à commencer !
