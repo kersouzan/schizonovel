@@ -11,3 +11,7 @@ Pour cela, choisir "cloner un dépôt" avec l'adresse "https://github.com/kersou
 Une fois le dépôt cloné sur votre ordinateur, vous pouvez lancer Ren'Py à partir du dossier "Ren'Py- xxx -sdk".
 
 Vous voilà prêts à commencer !
+
+
+
+La doc de Ren'Py est consultable ici: https://www.renpy.org/doc/html/quickstart.html
