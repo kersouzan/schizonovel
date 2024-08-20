@@ -10,4 +10,7 @@ Aptitudes:
 - Socialiser: amis, sorties dans des bars, boîtes, etc
 - Divertissement: lecture, films, séries
 - Marche quotidienne
+- Travail
+- Vie sentimentale: chaotique/stable
+- Critiquer les délires (adhésion ou doute)
 
