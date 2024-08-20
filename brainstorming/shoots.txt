@@ -1,5 +1,8 @@
-cigarette (donne des points de mental)
-Joints (développe une histoire plus mystique)
+Tous redonnent des points de mental.
+
+Nourriture
+cigarette
+Joints (attention: tend vers une bda mystique/persecution
 alcool (retire des points de mental)
-Neuros (redonne des points de mental)
+Neuros
 Benzos (redonne des points de mental temporaires)

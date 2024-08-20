@@ -1,22 +1,11 @@
 Jauges:
 - Santé mentale
-- Points de vie
-
 
 
 
 Santé mentale:
-Baisse réuglièrement, est modifiée par les shoots
+Baisse réuglièrement, est modifiée par les shoots et la nourriture
 Si trop bas, BDA
-
-
-
-Points de vie:
-Si trop bas, meurt
-
-
-
-
 
 
 
