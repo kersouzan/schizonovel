@@ -1,7 +1,7 @@
-Arbre de bonnes pratiques.
+Arbre/Liste de routines.
 
 On gagne de l'XP avec le temps que l'on peut convertir en aptitudes pour améliorer son quotidien.
-L'arbre revient à zéro en cas de BDA.
+L'arbre revient à zéro en cas de BDA (ou un certain nombre aléatoire sont perdues).
 
 
 Aptitudes:
