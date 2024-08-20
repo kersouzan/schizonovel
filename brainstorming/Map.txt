@@ -1,0 +1,10 @@
+Le joueur dispose d'une carte avec des points d'intérêts dans lesquels il peut se rendre.
+Cela permet d'ouvrir le choix du joueur à plus de possibilités.
+
+Question: Envisager de coder deux scènes par lieu (une normale et l'autre lors d'une BDA).
+Cela permettrait au joueur d'explorer la map même sous BDA et de faire le choix
+d'errer ou de se soigner.
+Ou est ce que la BDA conduit inévitablement à l'HP ?
+
+
+
