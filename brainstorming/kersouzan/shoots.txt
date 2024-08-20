@@ -1,0 +1,6 @@
+Shoots:
+cigarette (donne des points de mental)
+Joints (dévloppe une histoire plus mystique)
+alcool (retire des points de mental).
+Traitement (redonne des points de mental)
+
