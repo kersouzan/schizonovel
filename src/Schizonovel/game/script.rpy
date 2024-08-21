@@ -28,9 +28,9 @@ label start:
 
     # These display lines of dialogue.
     
-    $ player_name = renpy.input( "Hello there ! What s your name ?")
+    $ player_name = renpy.input( "Salut ! Quel est ton nom ?")
 
-    e "Hi [player_name] ! What's your gender ?"
+    e "Bienvenu [player_name] ! De quel genre es tu ?"
     
     menu:
 
