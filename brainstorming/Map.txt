@@ -1,0 +1,8 @@
+Le joueur dispose d'une carte avec des points d'intérêts dans lesquels il peut se rendre.
+Cela permet d'ouvrir le choix du joueur à plus de possibilités.
+
+Les BDA surviennent lorsque la santé mentale est trop basse.
+Il faut proposer deux maps (une normale et une autre sous BDA) avec des lieux différents.
+Cela permettrait au joueur d'explorer la map même sous BDA et de faire le choix d'errer ou de se soigner.
+
+
