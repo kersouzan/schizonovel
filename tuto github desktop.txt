@@ -1,0 +1,27 @@
+1) Installation
+
+Télécharger github Desktop: https://desktop.github.com/download/
+
+Installez le logiciel et lancez le
+
+Choisir "Sign in to Github.com"
+
+Autorisez l'application demandée sur le site Github
+
+Choisir "kersouzan/Schizonovel" parmi les dépôts et "clone a repository" à droite
+
+Attendre la synchronisation
+
+
+2) Utilisation
+
+Dans la barre de menu, vous voyez le repo "schizonovel", la branche "main" et le bouton pour fetch.
+
+Cliquez sur fetch (le repository est mis à jour)
+
+Dans la barre de navigation de gauche, vous voyez les fichiers à ajouter/supprimer/modifier.
+
+Une fois sélectionnés les fichiers à envoyer sur le serveur entrez le nom du commit en bas a gauche (par exemple "modification de la map")
+
+Et appuyez sur le bouton commit to main.
+
