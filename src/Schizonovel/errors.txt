@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 37: expected statement.
-    e string
-            ^
+File "game/script.rpy", line 18: expected ':' not found.
+    else
+        ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Aug 21 22:28:43 2024
+Thu Aug 22 00:36:26 2024

@@ -5,8 +5,7 @@
 
 define e = Character("Eileen")
 
-default player_name = "Me"
-default player_male = False
+default init_done = False
 
 
 
@@ -14,38 +13,12 @@ default player_male = False
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
+    if init_done:
+        jump map_display
+    else:
+        jump player_init
     
-    $ player_name = renpy.input( "Salut ! Quel est ton nom ?")
-
-    e "Bienvenu [player_name] ! De quel genre es tu ?"
     
-    menu:
-
-        "Female.":
-            $ player_male = False
-            jump player_chose_look
-
-        "Male.":
-            $ player_male = True
-            jump player_chose_look
-
-    label player_chose_look:
-
-    e "La suite pour bientôt !"
-
     # This ends the game.
 
     return
