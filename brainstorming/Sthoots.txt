@@ -4,5 +4,5 @@ Nourriture
 cigarette
 Joints (attention: tend vers une bda mystique/persecution)
 alcool (retire des points de mental)
-Neuros (voir neuros.txt)
+Neuros (voir neuros.txt 1/jour)
 Benzos (redonne des points de mental temporaires)

@@ -8,4 +8,6 @@ et de chercher quel est le bon neuro pour le perso.
 Et en les essayant, on voit quel neuro correspond le mieux au perso
 en essayant de minimiser les effets secondaires.
 
+La prise de neuros est limitée à 1 dose par jour (pour la gestion de santé mentale voir shooters.txt).
+
 
