@@ -6,22 +6,22 @@ Installez le logiciel et lancez le
 
 Choisir "Sign in to Github.com"
 
-Autorisez l'application demandée sur le site Github
+Autorisez l'application, comme demandée sur le site Github
 
 Choisir "kersouzan/Schizonovel" parmi les dépôts et "clone a repository" à droite
 
 Attendre la synchronisation
 
 
-2) Utilisation
+2) Utilisation de tous les jours
 
 Dans la barre de menu, vous voyez le repo "schizonovel", la branche "main" et le bouton pour fetch.
 
-Cliquez sur fetch (le repository est mis à jour)
+Cliquez sur fetch (le repository est mis à jour, les changements des autres sont intégrés à votre version)
 
 Dans la barre de navigation de gauche, vous voyez les fichiers à ajouter/supprimer/modifier.
 
-Une fois sélectionnés les fichiers à envoyer sur le serveur entrez le nom du commit en bas a gauche (par exemple "modification de la map")
+Une fois sélectionnés les fichiers à envoyer sur le serveur entrez le nom du commit en bas a gauche (ce que vous avez codé, par exemple "modification de la map")
 
 Et appuyez sur le bouton commit to main.
 
@@ -29,3 +29,6 @@ Enfin, appuyez sur le bouton "push it to main".
 
 Voilà, le code est sur le serveur !
 
+
+
+Attention, pensez bien à fetch avant de commit votre code.
