@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 33, in script
+    $ player_name = renpy.input()
+  File "game/script.rpy", line 33, in <module>
+    $ player_name = renpy.input()
+TypeError: input() missing 1 required positional argument: 'prompt'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 33, in script
+    $ player_name = renpy.input()
+  File "D:\git\schizonovel\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\git\schizonovel\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 33, in <module>
+    $ player_name = renpy.input()
+TypeError: input() missing 1 required positional argument: 'prompt'
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.2.3.24061702
+Schizonovel 1.0
+Wed Aug 21 22:29:15 2024

@@ -5,6 +5,10 @@
 
 define e = Character("Eileen")
 
+default player_name = "Me"
+default player_male = False
+
+
 
 # The game starts here.
 
@@ -23,10 +27,24 @@ label start:
     show eileen happy
 
     # These display lines of dialogue.
+    
+    $ player_name = renpy.input( "Hello there ! What s your name ?")
 
-    e "You've created a new Ren'Py game."
+    e "Hi [player_name] ! What's your gender ?"
+    
+    menu:
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+        "Female.":
+            $ player_male = False
+            jump player_chose_look
+
+        "Male.":
+            $ player_male = True
+            jump player_chose_look
+
+    label player_chose_look:
+
+    e "La suite pour bientôt !"
 
     # This ends the game.
 
