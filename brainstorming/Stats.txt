@@ -1,0 +1,15 @@
+Un onglet stats est consultable en cours de partie et en bilan de fin.
+
+Idées de variables à mettre en place:
+- Poids
+- Nb de chaque shooters consomés
+- Parcours (branches de narrations explorées, nb lieux visités)
+- Effets secondaires neuros (Libido, Raideur Musculaire, Dyskinesie, Parkinson)
+- Un score suivants le nombre de routines mises en place
+- Nb de BDA
+- Nb d'hospits
+- Nb d'arrêts par la police
+
+
+
+

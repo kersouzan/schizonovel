@@ -4,4 +4,6 @@ Lieux sur la map:
 - Commissariat
 - HP
 - Bars
-- Voyage pathologique
+- Parc
+- Musée
+- Voyage pathologique (hors map - style Nepal)
