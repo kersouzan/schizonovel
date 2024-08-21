@@ -1,0 +1,7 @@
+Lieux sur la map:
+- Famille
+- Urgences
+- Commissariat
+- HP
+- Bars
+- Voyage pathologique

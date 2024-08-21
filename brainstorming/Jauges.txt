@@ -1,11 +1,7 @@
-Jauges:
-- Santé mentale
-
-
-
 Santé mentale:
-Baisse réuglièrement, est modifiée par les shoots et la nourriture
-Si trop bas, BDA
+- Baisse réuglièrement.
+- Est modifiée par les shoots & routines
+- Si trop bas, BDA
 
 
 
