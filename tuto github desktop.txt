@@ -25,3 +25,7 @@ Une fois sélectionnés les fichiers à envoyer sur le serveur entrez le nom du 
 
 Et appuyez sur le bouton commit to main.
 
+Enfin, appuyez sur le bouton "push it to main".
+
+Voilà, le code est sur le serveur !
+
