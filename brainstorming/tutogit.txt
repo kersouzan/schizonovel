@@ -1,0 +1,33 @@
+1) Installez git:
+
+télécharger à https://git-scm.com/downloads
+Si vous êtes sous linux le terminal est par défaut, sous Windows installez git bash
+
+Initialisez git:
+Configurez votre identité:
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+2) Travaillez avec un dépôt distant:
+
+Clonez le repo de kersouzan:
+Créez un dossier sur votre ordinateur qui accueillera le projet puis placez vous dedans puis faites:
+$ git clone 'adresse' 
+(on trouve l'adresse sur le repo de kersouzan dans l'onglet code, puis l'onglet https)
+
+Vous avez maintenant le projet sur votre ordinateur.
+
+3) Travaillez sur le projet en local
+
+Pour faire votre premier commit sur le projet:
+Créez un fichier dans le dossier brainstorming avec la commande $ touch essai.txt
+
+Ajoutez le fichier créé au projet avec $ git add essai.txt
+
+Commitez le fichier ajouté avec $ git commit -m "Ajout du fichier essai.txt"
+
+
+4) Envoyez le projet actualisé avec $ git push origin main
+
+
+
