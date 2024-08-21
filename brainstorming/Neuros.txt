@@ -1,0 +1,11 @@
+Les neuros ont des effets sur la santé mentale et les effets secondaires.
+
+Au début de la partie, les stats des neuros sont tirés au hasard.
+
+Cela permet de changer au fils des parties (chacun est différent face au neuro)
+et de chercher quel est le bon neuro pour le perso.
+
+Et en les essayant, on voit quel neuro correspond le mieux au perso
+en essayant de minimiser les effets secondaires.
+
+
