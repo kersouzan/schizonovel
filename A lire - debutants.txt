@@ -3,8 +3,10 @@ C'est un logiciel qui permet de synchroniser les fichiers du projets entre tous 
 
 Exemples de clients git:
 - github Desktop
-- turtoise git
-- gitkraken
+- turtoise git (https://www.youtube.com/playlist?list=PLMJfvBwcOl66_1UJV8ywUoL7mZFPIMJKx)
+- gitkraken (https://www.youtube.com/watch?v=JZ7b4o3LrDY)
+- lignes de commandes git
+
 
 Une fois le client git installé, il vous faut faire un clone du dépôt sur votre ordinateur.
 Pour cela, choisir "cloner un dépôt" avec l'adresse "https://github.com/kersouzan/schizonovel" et choisir le dossier sur votre machine où cloner le dépôt.
