@@ -3,6 +3,8 @@
 Pour débuter, il vous faut un client git.
 C'est un logiciel qui permet de synchroniser les fichiers du projets entre tous les participants sans qu'il n'y ait de conflit de modification.
 
+Si vous débutez ou si tout ça c'est du chinois, optez pour github desktop.
+
 Exemples de clients git:
 - github Desktop (le plus simple. Voir "tuto github desktop.txt")
 - turtoise git (https://www.youtube.com/playlist?list=PLMJfvBwcOl66_1UJV8ywUoL7mZFPIMJKx)
