@@ -1,7 +1,7 @@
 default player_name = "Me"
 default player_male = False
 
-label player_init:
+label scene_player_init:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -25,14 +25,14 @@ label player_init:
 
         "Femme.":
             $ player_male = False
-            jump player_chose_look
+            jump scene_player_chose_look
 
         "Homme.":
             $ player_male = True
-            jump player_chose_look
+            jump scene_player_chose_look
 
-    label player_chose_look:
+    label scene_player_chose_look:
 
     e "Tu pourras bientôt choisir ton look."
 
-    jump map_display
+    jump scene_map_display

@@ -7,7 +7,7 @@ default mental = 50
 
 # The map is displayed here.
 
-label map_display:
+label scene_map_display:
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg city.png" or "bg city.jpg") to the
@@ -39,4 +39,4 @@ label map_display:
     
     "Très bon choix !"
 
-    jump map_display
+    jump scene_map_display

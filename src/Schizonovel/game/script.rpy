@@ -11,7 +11,7 @@ define e = Character("Eileen")
 
 label start:
 
-    jump player_init
+    jump scene_player_init
     
     # This ends the game.
 
