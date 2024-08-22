@@ -2,6 +2,7 @@
 
 
 # default player_name = "Me"
+default mental = 50
 
 
 # The map is displayed here.
@@ -14,9 +15,9 @@ label map_display:
 
     scene bg city
     #show eileen happy
-    with dissolve
-
-    #show screen mental_bar
+    #with dissolve
+    
+    show screen mental_bar
 
     # These display lines of dialogue.
     

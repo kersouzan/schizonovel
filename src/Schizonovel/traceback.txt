@@ -1,70 +1,70 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/map.rpy", line 27, in script
-    pause
-  File "renpy/common/000statements.rpy", line 462, in execute_pause
-    renpy.pause()
-  File "game/mental_bar.rpy", line 1, in execute
-    screen mental_bar:
-  File "game/mental_bar.rpy", line 1, in execute
-    screen mental_bar:
-  File "game/mental_bar.rpy", line 2, in execute
-    bar:
-  File "game/mental_bar.rpy", line 2, in keywords
-    bar:
-  File "game/mental_bar.rpy", line 3, in <module>
-    value mental
-NameError: name 'mental' is not defined
+  File "game/map.rpy", line 24, in script
+    e "Voilà un plan de la ville. Choisis un lieu à visiter."
+  File "renpy/common/000window.rpy", line 126, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 70, in _window_show
+    renpy.with_statement(trans)
+TypeError: Value (400, 50) of type <class 'tuple'> not recognized as a position.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/map.rpy", line 27, in script
-    pause
-  File "D:\git\renpy-8.2.3-sdk\renpy\ast.py", line 1971, in execute
-    self.call("execute")
-  File "D:\git\renpy-8.2.3-sdk\renpy\ast.py", line 1953, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "D:\git\renpy-8.2.3-sdk\renpy\statements.py", line 349, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 462, in execute_pause
-    renpy.pause()
-  File "D:\git\renpy-8.2.3-sdk\renpy\exports.py", line 1662, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay, pause_modal=modal)
-  File "D:\git\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "game/map.rpy", line 24, in script
+    e "Voilà un plan de la ville. Choisis un lieu à visiter."
+  File "D:\git\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "D:\git\renpy-8.2.3-sdk\renpy\ast.py", line 583, in execute
+    statement_name(stmt_name)
+  File "D:\git\renpy-8.2.3-sdk\renpy\ast.py", line 52, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 126, in _window_auto_callback
+    _window_show(auto=True)
+  File "renpy/common/000window.rpy", line 70, in _window_show
+    renpy.with_statement(trans)
+  File "D:\git\renpy-8.2.3-sdk\renpy\exports.py", line 1782, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 1549, in do_with
+    return self.interact(trans_pause=True,
   File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "D:\git\renpy-8.2.3-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/mental_bar.rpy", line 1, in execute
-    screen mental_bar:
-  File "game/mental_bar.rpy", line 1, in execute
-    screen mental_bar:
-  File "game/mental_bar.rpy", line 2, in execute
-    bar:
-  File "game/mental_bar.rpy", line 2, in keywords
-    bar:
-  File "game/mental_bar.rpy", line 3, in <module>
-    value mental
-NameError: name 'mental' is not defined
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 2819, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 1353, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\transition.py", line 383, in render
+    bottom = render(self.old_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 230, in renpy.display.render.render
+  File "D:\git\renpy-8.2.3-sdk\renpy\display\core.py", line 226, in compute_raw
+    raise TypeError("Value {} of type {} not recognized as a position.".format(value, type(value)))
+TypeError: Value (400, 50) of type <class 'tuple'> not recognized as a position.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
 Schizonovel 1.0
-Thu Aug 22 16:37:44 2024
+Thu Aug 22 17:47:39 2024
