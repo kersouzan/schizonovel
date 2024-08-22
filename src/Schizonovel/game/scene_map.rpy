@@ -18,6 +18,7 @@ label scene_map_display:
     #with dissolve
     
     show screen mental_bar
+    show screen map
 
     # These display lines of dialogue.
     
@@ -26,16 +27,6 @@ label scene_map_display:
     #hide eileen
 
     pause
-    
-
-
-
-
-    # ajouter les destinations
-
-
-
-
     
     "Très bon choix !"
 

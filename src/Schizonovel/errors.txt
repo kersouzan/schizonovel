@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screen_shooters.rpy", line 1: screen expects a non-empty block.
-    screen shooters():
-                      ^
+File "game/scene_map.rpy", line 35: expected statement.
+    Show screen map
+                   ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Aug 22 19:45:17 2024
+Thu Aug 22 22:27:58 2024

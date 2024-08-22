@@ -1,5 +1,7 @@
 label scene_forest:
 
+    hide screen map
+
     scene bg forest
 
     show eileen happy
@@ -8,4 +10,4 @@ label scene_forest:
     
     e "Quel lieu reposant !"
     
-    jump map_display
+    jump scene_map_display
