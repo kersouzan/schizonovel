@@ -16,6 +16,8 @@ label map_display:
     #show eileen happy
     with dissolve
 
+    #show screen mental_bar
+
     # These display lines of dialogue.
     
     #e "Voilà un plan de la ville. Choisis un lieu à visiter."
@@ -24,7 +26,15 @@ label map_display:
 
     pause
     
-    # ajouter les destinations et un bouton quitter
+
+
+
+
+    # ajouter les destinations
+
+
+
+
     
     "Très bon choix !"
 

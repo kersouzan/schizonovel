@@ -23,20 +23,16 @@ label player_init:
     
     menu:
 
-        "Female.":
+        "Femme.":
             $ player_male = False
             jump player_chose_look
 
-        "Male.":
+        "Homme.":
             $ player_male = True
             jump player_chose_look
 
     label player_chose_look:
 
-    $ init_done = True
-    
+    e "Tu pourras bientôt choisir ton look."
+
     jump map_display
-
-    # This ends the game.
-
-    return

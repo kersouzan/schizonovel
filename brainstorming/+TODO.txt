@@ -1,0 +1,6 @@
+Faire un tuto apres la selection du perso pour expliquer:
+- la barre de sante mentale (decroit dans le temps plus ou moins vite en fonction du stress)
+- les shooters (permettent d'augmenter la sante mentale)
+- les compétences (permettent d'améliorer son quotidien)
+- la page stats (pour voir l'evolution du perso)
+- la map (pour voyager d'un lieu à l'autre)

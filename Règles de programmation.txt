@@ -1,0 +1,16 @@
+Toujours mettre à jour son code avant de push.
+
+
+Toujours commit un code fonctionnel, pour pas casser le travail des autres.
+
+
+Concernant les label, ren'py recherche dans tous les fichiers.
+Ce qui est pratique mais pour ne pas s'y perdre lorsque le projet sera columineux,
+nommer la variable par <nom de fichier>_<nom du label>.
+Par exemple: map_display (fichier map, label map_display). 
+
+
+Le python n'accepte pas les tabulations, donc pensez à indenter avec des espaces.
+
+
+
