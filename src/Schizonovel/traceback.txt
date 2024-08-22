@@ -1,22 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scene_map.rpy", line 42, in script
-    jump map_display
-ScriptError: could not find label 'map_display'.
+  File "game/scene_map.rpy", line 28, in script call
+    pause
+  File "game/scene_map.rpy", line 28, in script call
+    pause
+ScriptError: could not find label 'shooters'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scene_map.rpy", line 42, in script
-    jump map_display
-  File "D:\git\renpy-8.2.3-sdk\renpy\ast.py", line 1701, in execute
-    rv = renpy.game.script.lookup(target)
+  File "D:\git\renpy-8.2.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\git\renpy-8.2.3-sdk\renpy\main.py", line 637, in main
+    run(restart)
+  File "D:\git\renpy-8.2.3-sdk\renpy\main.py", line 145, in run
+    renpy.execution.run_context(True)
+  File "D:\git\renpy-8.2.3-sdk\renpy\execution.py", line 955, in run_context
+    context.run()
+  File "game/scene_map.rpy", line 28, in script call
+    pause
+  File "game/scene_map.rpy", line 28, in script call
+    pause
   File "D:\git\renpy-8.2.3-sdk\renpy\script.py", line 1103, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'map_display'.
+ScriptError: could not find label 'shooters'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
 Schizonovel 1.0
-Thu Aug 22 18:41:43 2024
+Thu Aug 22 20:09:01 2024

@@ -1,4 +1,10 @@
 screen mental_bar():
+    imagebutton:
+        xpos 50
+        ypos 25
+        idle "brain_button.png"
+        action Show("shooters")
+
     bar:
         value mental
         range 100
@@ -6,4 +12,4 @@ screen mental_bar():
         right_bar "mental_bar_empty.png"
         xysize(200,50)
         xalign 0.1
-        yalign 0.01
+        yalign 0.05
