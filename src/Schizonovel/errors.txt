@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/map.rpy", line 17: Tab characters are not allowed in Ren'Py scripts.
+The label player_init is defined twice, at File "game/scene_forest.rpy", line 4:
+label player_init:
+and File "game/scene_player_init.rpy", line 4:
+label player_init:
 
-File "game/mental_bar.rpy", line 3: Tab characters are not allowed in Ren'Py scripts.
+
+The label player_chose_look is defined twice, at File "game/scene_forest.rpy", line 34:
+    label player_chose_look:
+and File "game/scene_player_init.rpy", line 34:
+    label player_chose_look:
+
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Thu Aug 22 16:26:46 2024
+Thu Aug 22 18:14:52 2024
