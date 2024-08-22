@@ -1,8 +1,9 @@
 Tous redonnent des points de mental.
+Un timer contrôle que les prises soient espacées (sauf nourriture).
+
 
 Nourriture
 alcool
 cigarette
 Joints (attention: tend vers une bda mystique/persecution)
-Neuros (voir neuros.txt 1/jour)
 Benzos (redonne des points de mental temporaires)

@@ -1,5 +1,7 @@
 Les neuros ont des effets sur la santé mentale et les effets secondaires.
 
+La prise de neuros est automatique et se configure dans l'onglet du perso.
+
 Au début de la partie, les stats des neuros sont tirés au hasard.
 
 Cela permet de changer au fils des parties (chacun est différent face au neuro)
@@ -7,7 +9,5 @@ et de chercher quel est le bon neuro pour le perso.
 
 Et en les essayant, on voit quel neuro correspond le mieux au perso
 en essayant de minimiser les effets secondaires.
-
-La prise de neuros est limitée à 1 dose par jour (pour la gestion de santé mentale voir shooters.txt).
 
 
