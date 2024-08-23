@@ -1,4 +1,15 @@
 screen shooters():
+    modal True
+
+    # As the screen is modal, the brain button (above screen)
+    # can't be triggered. This copy allow to hide the screen
+
+    imagebutton:
+        xpos 50
+        ypos 25
+        idle "brain_button.png"
+        action Hide()
+
     frame:
         xalign 0.02
         yalign 0.25
