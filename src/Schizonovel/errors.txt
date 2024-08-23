@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 37: expected statement.
-    e string
-            ^
+File "game/scene_map.rpy", line 35: expected statement.
+    Show screen map
+                   ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Aug 21 22:28:43 2024
+Thu Aug 22 22:27:58 2024

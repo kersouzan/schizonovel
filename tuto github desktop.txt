@@ -1,6 +1,7 @@
 1) Installation
 
 Télécharger github Desktop: https://desktop.github.com/download/
+Sous linux, voir https://github.com/shiftkey/desktop?tab=readme-ov-file#installation-via-package-manager
 
 Installez le logiciel et lancez le
 
