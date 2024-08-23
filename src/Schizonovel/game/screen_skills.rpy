@@ -8,44 +8,21 @@ screen skills():
         xalign 0.5
         yalign 0.5
         image "calepin.png"
-        grid 4 2:  # TODO boucle for sur la struct skills
-            xalign 0.5
-            yalign 0.5
-            xsize 1.0
-            ysize 1.0
+        vbox:
+            #xalign 0.5
+            #yalign 0.5
+            #xsize 1.0
+            #ysize 1.0
  
-            text "{color=#000}Méditation{/color}"
-
-            imagebutton:
-                #xpos 50
-                #ypos 200
-                idle "add.png"
-                action NullAction()
-                
-            text "{color=#000}Marche{/color}"
-            
-            imagebutton:
-                #xpos 50
-                #ypos 200
-                idle "add.png"
-                action NullAction()
-
-            text "{color=#000}Lecture{/color}"
-
-            imagebutton:
-                #xpos 50
-                #ypos 200
-                idle "add.png"
-                action NullAction()
-                
-            text "{color=#000}Séries{/color}"
-            
-            imagebutton:
-                #xpos 50
-                #ypos 200
-                idle "add.png"
-                action NullAction()
-                
+            for i in range(len(skills)):
+                $ skill = skills[i]
+                hbox:
+                    text "{color=#000}[skill.name]{/color}"
+                    text "{color=#000}[skill.cost]{/color}"
+                    
+                    imagebutton:
+                        idle "add.png"
+                        action Jump(skill.label)
                 
     imagebutton:
         xalign 0.95
