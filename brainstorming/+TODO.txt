@@ -4,3 +4,10 @@ Faire un tuto apres la selection du perso pour expliquer:
 - les compétences (permettent d'améliorer son quotidien)
 - la page stats (pour voir l'evolution du perso)
 - la map (pour voyager d'un lieu à l'autre)
+
+
+
+
+jump in variable:
+call expression "sub" + "routine" pass (count=3)
+call subroutine(3)
