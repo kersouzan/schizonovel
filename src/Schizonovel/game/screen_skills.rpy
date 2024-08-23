@@ -4,45 +4,51 @@ screen skills():
     # As the screen is modal, the brain button (above screen)
     # can't be triggered. This copy allow to hide the screen
 
-    imagebutton:
-        xalign 0.5
-        ypos 25
-        idle "notes.png"
-        action Hide()
-
     frame:
         xalign 0.5
-        yalign 0.25
-        xpadding 20
-        ypadding 20
-        vbox:
+        yalign 0.5
+        image "calepin.png"
+        grid 4 2:  # TODO boucle for sur la struct skills
+            xalign 0.5
+            yalign 0.5
+            xsize 1.0
+            ysize 1.0
+            
+            text "{color=#000}Méditation{/color}"
+
             imagebutton:
                 #xpos 50
                 #ypos 200
-                idle "food_button.png"
-                action [Hide(), Call("shooter_food")]
-
-            imagebutton:
-                #xpos 50
-                #ypos 320
-                idle "alcool_button.png"
-                action [Hide(), Call("shooter_alcool")]
-
-            imagebutton:
-                #xpos 50
-                #ypos 440
-                idle "cigarette_button.png"
-                action [Hide(), Call("shooter_cigarette")]
-
-            imagebutton:
-                #xpos 50
-                #ypos 560
-                idle "joints_button.png"
-                action [Hide(), Call("shooter_joints")]
-
-            imagebutton:
-                #xpos 50
-                #ypos 680
-                idle "benzo_button.png"
-                action [Hide(), Call("shooter_benzo")]
+                idle "add.png"
+                action NullAction()
                 
+            text "{color=#000}Marche{/color}"
+            
+            imagebutton:
+                #xpos 50
+                #ypos 200
+                idle "add.png"
+                action NullAction()
+
+            text "{color=#000}Lecture{/color}"
+
+            imagebutton:
+                #xpos 50
+                #ypos 200
+                idle "add.png"
+                action NullAction()
+                
+            text "{color=#000}Séries{/color}"
+            
+            imagebutton:
+                #xpos 50
+                #ypos 200
+                idle "add.png"
+                action NullAction()
+                
+                
+    imagebutton:
+        xalign 0.95
+        yalign 0.05
+        idle "x.png"
+        action Hide()
