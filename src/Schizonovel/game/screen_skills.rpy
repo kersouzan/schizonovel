@@ -13,7 +13,7 @@ screen skills():
             yalign 0.5
             xsize 1.0
             ysize 1.0
-            
+ 
             text "{color=#000}Méditation{/color}"
 
             imagebutton:
