@@ -1,0 +1,11 @@
+Lieux sur la map:
+- Famille
+- Urgences
+- Commissariat
+- HP
+- Bars
+- Parc
+- Musée
+- Voyage pathologique (hors map - style Nepal, hôtels)
+- bibliothèque
+
