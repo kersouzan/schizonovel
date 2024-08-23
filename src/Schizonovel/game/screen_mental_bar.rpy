@@ -3,7 +3,7 @@ screen mental_bar():
         xpos 50
         ypos 25
         idle "brain_button.png"
-        action Show("shooters")
+        action ToggleScreen("shooters")
 
     bar:
         value mental
