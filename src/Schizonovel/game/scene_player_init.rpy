@@ -1,6 +1,8 @@
 default player_name = "Me"
 default player_male = False
 
+define player = Character("[player_name]", color="#ffc8c8")
+
 label scene_player_init:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -18,6 +20,11 @@ label scene_player_init:
     # These display lines of dialogue.
     
     $ player_name = renpy.input( "Salut ! Quel est ton nom ?")
+    $ player_name = player_name.strip()
+
+    if not player_name:
+        $ player_name = "John Doe"
+
 
     e "Bienvenu [player_name] ! De quel genre es tu ?"
     
