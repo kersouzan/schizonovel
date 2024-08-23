@@ -1,4 +1,6 @@
-screen mental_bar():
+default mental = 50
+
+screen main_GUI():
     imagebutton:
         xpos 50
         ypos 25
@@ -13,3 +15,9 @@ screen mental_bar():
         xysize(200,50)
         xalign 0.1
         yalign 0.05
+
+    imagebutton:
+        xalign 0.5
+        ypos 25
+        idle "notes.png"
+        action ToggleScreen("skills")

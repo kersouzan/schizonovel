@@ -1,3 +1,16 @@
+default food_timer = 0
+default alcool_timer = 0
+default cigarette_timer = 0
+default joints_timer = 0
+default benzo_timer = 0
+
+default food_time_limit = 10
+default alcool_time_limit = 10
+default cigarette_time_limit = 10
+default joints_time_limit = 10
+default benzo_time_limit = 10
+
+
 screen shooters():
     modal True
 
@@ -47,22 +60,43 @@ screen shooters():
                 action [Hide(), Call("shooter_benzo")]
 
 
+
 label shooter_food:
-    $ mental += 10
+    if (food_timer + food_time_limit < renpy.get_game_runtime()):
+        $ mental += 10
+        $ food_timer = renpy.get_game_runtime()
+    else:
+        player "Je devrais attendre un peu avant d'en reprendre."
     return 0
 
 label shooter_alcool:
-    $ mental += 10
+    if (alcool_timer + alcool_time_limit < renpy.get_game_runtime()):
+        $ mental += 10
+        $ alcool_timer = renpy.get_game_runtime()
+    else:
+        player "Je devrais attendre un peu avant d'en reprendre."
     return 0
 
 label shooter_cigarette:
-    $ mental += 10
+    if (cigarette_timer + cigarette_time_limit < renpy.get_game_runtime()):
+        $ mental += 10
+        $ cigarette_timer = renpy.get_game_runtime()
+    else:
+        player "Je devrais attendre un peu avant d'en reprendre."
     return 0
 
 label shooter_joints:
-    $ mental += 10
+    if (joints_timer + joints_time_limit < renpy.get_game_runtime()):
+        $ mental += 10
+        $ joints_timer = renpy.get_game_runtime()
+    else:
+        player "Je devrais attendre un peu avant d'en reprendre."
     return 0
 
 label shooter_benzo:
-    $ mental += 10
+    if (benzo_timer + benzo_time_limit < renpy.get_game_runtime()):
+        $ mental += 10
+        $ benzo_timer = renpy.get_game_runtime()
+    else:
+        player "Je devrais attendre un peu avant d'en reprendre."
     return 0

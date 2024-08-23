@@ -1,10 +1,5 @@
 # This file describes interactive map.
 
-
-# default player_name = "Me"
-default mental = 50
-
-
 # The map is displayed here.
 
 label scene_map_display:
@@ -22,20 +17,10 @@ label scene_map_display:
     # images directory to show it.
 
     scene bg city
-    #show eileen happy
-    #with dissolve
     
-    show screen mental_bar
+    show screen main_GUI
     show screen map
-
-    # These display lines of dialogue.
-    
-    #e "Voilà un plan de la ville. Choisis un lieu à visiter."
-
-    #hide eileen
 
     pause
     
-    "Très bon choix !"
-
     jump scene_map_display
