@@ -11,3 +11,23 @@ Faire un tuto apres la selection du perso pour expliquer:
 jump in variable:
 call expression "sub" + "routine" pass (count=3)
 call subroutine(3)
+
+
+
+
+
+Pour les timers de shooters, il faudrait compter le nombre de scenes complétées plutôt que les secondes.
+
+
+
+
+
+Graphe de scène:
+Lister les scènes avec:
+- label (identifiant)
+- booléen BDA
+- image vignette
+- coordonnées
+- labels requis
+- arc (permet d'exclure de vieilles scène lorsque l'on se spécialise dans une branche)
+
