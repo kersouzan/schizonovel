@@ -9,28 +9,36 @@ screen skills():
         yalign 0.5
         image "calepin.png"
         
-        text "{color=#000}Compétences:{/color}"
+        hbox:
+            xpos 85
+            ypos 60
+            spacing 170
+            text "{color=#000}Compétences:{/color}"
+            text "{color=#000}Cost{/color}"
         
-        $ from math import *
-        $ nbRow = len(skills)
-        grid 3 nbRow :
+        hbox:
             xpos 100
             ypos 100
-            xspacing 50
+            spacing 50
             #xalign 0.5
             #yalign 0.5
             #xsize 1.0
             #ysize 1.0
  
-            for i in range(len(skills)):
-                $ skill = skills[i]
-                text "{color=#000}[skill.name]{/color}"
-                
-                text "{color=#000}[skill.cost]{/color}"
-                
-                imagebutton:
-                    idle "add_25.png"
-                    action Jump(skill.label)
+            vbox:
+                for i in range(len(skills)):
+                    text "{color=#000}[skills[i].name]{/color}"
+                    
+            vbox:
+                for i in range(len(skills)):
+                    text "{color=#000}[skills[i].cost]{/color}"
+                    
+            vbox:
+                spacing 14
+                for i in range(len(skills)):
+                    imagebutton:
+                        idle "add_25.png"
+                        action Jump(skills[i].label)
                         
     imagebutton:
         xalign 0.95
