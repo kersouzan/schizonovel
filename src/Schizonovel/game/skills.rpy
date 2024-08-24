@@ -2,19 +2,20 @@ define skills = []
 
 init python:
     class Skill:
-        def __init__(self, name, cost, label, mental_effect):
+        def __init__(self, name, cost, label, mental_effect, description):
             self.name = name
             self.cost = cost
             self.label = label
             self.mental_effect = mental_effect
+            self.description = description
 
-    skills.append(Skill("Lecture", "100", "skill_read", 5))
-    skills.append(Skill("Marche", "100", "skill_walk", 5))
-    skills.append(Skill("Méditation", "100", "skill_meditate", 5))
-    skills.append(Skill("Nutrition", "100", "skill_nutrition", 5))
-    skills.append(Skill("Relation amicale", "100", "skill_friends", 5))
-    skills.append(Skill("Relation sentimentale", "100", "skill_lover", 5))
-    skills.append(Skill("Séries", "100", "skill_series", 5))
+    skills.append(Skill("Lecture", "100", "skill_read", 5, "Passer du temps à lire chaque soir."))
+    skills.append(Skill("Marche", "100", "skill_walk", 5, "Marche quotidienne d'une demi heure"))
+    skills.append(Skill("Méditation", "100", "skill_meditate", 5, "Médite 20 minutes chaque matin après le lever"))
+    skills.append(Skill("Nutrition", "100", "skill_nutrition", 5, "Cuisine des plats, et change des pates pour une alimentation variée à base de légumes"))
+    skills.append(Skill("Relation amicale", "100", "skill_friends", 5, "Prend le temps d'appeler Jeff pour aller boire un verre."))
+    skills.append(Skill("Relation sentimentale", "100", "skill_lover", 5, "Passe du temps avec ma/mon compagn.e.on"))
+    skills.append(Skill("Séries", "100", "skill_series", 5, "Regarde un épisode de la série encours par jour pour se divertir."))
 
 
 label skill_read:

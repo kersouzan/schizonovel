@@ -29,5 +29,11 @@ Lister les scènes avec:
 - image vignette
 - coordonnées
 - labels requis
-- arc (permet d'exclure de vieilles scène lorsque l'on se spécialise dans une branche)
+- variables requises (arc, etapes clés)
+
+
+
+
+skill ajouter description on hover
+
 
