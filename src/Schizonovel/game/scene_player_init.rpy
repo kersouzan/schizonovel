@@ -42,4 +42,4 @@ label scene_player_init:
 
     e "Tu pourras bientôt choisir ton look."
 
-    jump scene_map_display
+    jump scene_tuto
