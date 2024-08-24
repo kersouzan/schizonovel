@@ -8,3 +8,5 @@ src/Schizonovel/log.txt
 src/Schizonovel/errors.txt
 
 src/Schizonovel/traceback.txt
+
+*.rpyc
