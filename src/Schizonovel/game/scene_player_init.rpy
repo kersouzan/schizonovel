@@ -26,20 +26,22 @@ label scene_player_init:
         $ player_name = "John Doe"
 
 
-    e "Bienvenu [player_name] ! De quel genre es tu ?"
+    e "Bienvenue [player_name] !"
+
+#    e "Bienvenu [player_name] ! De quel genre es tu ?"
     
-    menu:
+#    menu:
 
-        "Femme.":
-            $ player_male = False
-            jump scene_player_chose_look
+#        "Femme.":
+#            $ player_male = False
+#            jump scene_player_chose_look
 
-        "Homme.":
-            $ player_male = True
-            jump scene_player_chose_look
+#        "Homme.":
+#            $ player_male = True
+#            jump scene_player_chose_look
 
-    label scene_player_chose_look:
+#    label scene_player_chose_look:
 
-    e "Tu pourras bientôt choisir ton look."
+#    e "Tu pourras bientôt choisir ton look."
 
     jump scene_tuto

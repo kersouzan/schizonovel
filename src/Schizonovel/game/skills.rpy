@@ -55,7 +55,7 @@ screen skills():
             ypos 60
             spacing 170
             text "{color=#000}Compétences:{/color}"
-            text "{color=#000}Cost{/color}"
+            text "{color=#000}Coût{/color}"
         
         hbox:
             xpos 100
