@@ -26,8 +26,6 @@ label scene_player_init:
         $ player_name = "John Doe"
 
 
-    e "Bienvenue [player_name] !"
-
 #    e "Bienvenu [player_name] ! De quel genre es tu ?"
     
 #    menu:

@@ -11,7 +11,7 @@ label scene_tuto:
 
     show eileen happy
     
-    e "Je te souahite la bienvenue ! Commençons par un rapide tutoriel."
+    e "Je te souahite la bienvenue [player_name] ! Commençons par un rapide tutoriel."
 
     e "Tu peux passer le tutoriel à l'aide du bouton skip dans le menu en bas de l'écran."
 
