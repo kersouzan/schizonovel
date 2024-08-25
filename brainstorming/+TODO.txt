@@ -30,3 +30,5 @@ skill ajouter description on hover
 
 
 
+Afficher mais desactiver les boutons de la map lors du tuto.
+

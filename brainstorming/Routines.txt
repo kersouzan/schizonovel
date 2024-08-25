@@ -7,8 +7,10 @@ L'arbre revient à zéro en cas de BDA (ou un certain nombre aléatoire sont per
 Aptitudes:
 - Nutrition
 - Sport (différentes fréquences, peut interagir avec socialiser)
+- Méditation
 - Socialiser: amis, sorties dans des bars, boîtes, etc
 - Divertissement: lecture, films, séries
+- Photographie
 - Marche quotidienne
 - Travail
 - Vie sentimentale: chaotique/stable
