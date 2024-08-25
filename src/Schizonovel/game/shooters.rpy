@@ -20,7 +20,7 @@ screen shooters():
     imagebutton:
         xpos 50
         ypos 25
-        idle "brain_button.png"
+        idle "gui/brain_button.png"
         action Hide()
 
     frame:
@@ -32,31 +32,31 @@ screen shooters():
             imagebutton:
                 #xpos 50
                 #ypos 200
-                idle "food_button.png"
+                idle "gui/food_button.png"
                 action [Hide(), Call("shooter_food")]
 
             imagebutton:
                 #xpos 50
                 #ypos 320
-                idle "alcool_button.png"
+                idle "gui/alcool_button.png"
                 action [Hide(), Call("shooter_alcool")]
 
             imagebutton:
                 #xpos 50
                 #ypos 440
-                idle "cigarette_button.png"
+                idle "gui/cigarette_button.png"
                 action [Hide(), Call("shooter_cigarette")]
 
             imagebutton:
                 #xpos 50
                 #ypos 560
-                idle "joints_button.png"
+                idle "gui/joints_button.png"
                 action [Hide(), Call("shooter_joints")]
 
             imagebutton:
                 #xpos 50
                 #ypos 680
-                idle "benzo_button.png"
+                idle "gui/benzo_button.png"
                 action [Hide(), Call("shooter_benzo")]
 
 

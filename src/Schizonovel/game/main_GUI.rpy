@@ -4,14 +4,14 @@ screen main_GUI():
     imagebutton:
         xpos 50
         ypos 25
-        idle "brain_button.png"
+        idle "gui/brain_button.png"
         action ToggleScreen("shooters")
 
     bar:
         value mental
         range 100
-        left_bar "mental_bar_full.png"
-        right_bar "mental_bar_empty.png"
+        left_bar "gui/mental_bar_full.png"
+        right_bar "gui/mental_bar_empty.png"
         xysize(200,50)
         xalign 0.1
         yalign 0.05
@@ -19,5 +19,5 @@ screen main_GUI():
     imagebutton:
         xalign 0.5
         ypos 25
-        idle "notes.png"
+        idle "gui/notes.png"
         action ToggleScreen("skills")

@@ -62,7 +62,7 @@ screen skills():
     frame:
         xalign 0.5
         yalign 0.5
-        image "calepin.png"
+        image "gui/calepin.png"
         
         hbox:
             xpos 85
@@ -92,11 +92,11 @@ screen skills():
                 spacing 14
                 for i in range(len(skills)):
                     imagebutton:
-                        idle "add_25.png"
+                        idle "gui/add_25.png"
                         action Jump(skills[i].label)
                         
     imagebutton:
         xalign 0.95
         yalign 0.05
-        idle "x.png"
+        idle "gui/x.png"
         action Hide()

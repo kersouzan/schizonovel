@@ -8,7 +8,7 @@ label scene_map_display:
         imagebutton:
             xpos 1000
             ypos 600
-            idle "ico_forest.png"
+            idle "places/ico_forest.png"
             action Jump("scene_forest")
             
     
