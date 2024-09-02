@@ -19,16 +19,21 @@
         <h3>Coordonnées</h3>
         <p>Les coordonnées sont les coordonnées d'affichage de la vignette sur la carte de Paris</p>
         <p>Utilisez coordinates.html pour les calculer</p>
-        <h3>Label Regex</h3>
-        <p>Label regex est une expression régulière qui permet d'évaluer si la scène est disponible sur la carte de Paris.</p>
-        <p>Par exemple, la regex "root" indique que la scène est disponible dès le début de l'aventure.</p>
-        <p>Une regex peut cominer plusieurs scènes. Si la scène doit s'afficher si le joueur a complété la scène A ou la scène B. Une regex peut résumer cela par la regex: "scene_a | scene_b"</p>
-        <p>Enfin, le bouton "Créer nouvelle" permet de créer la scène.</p>
-        <p>Une fois crée, celle-ci peut être déplacer pour plus de lisibilité du graphe.</p>
+        <h3>Conditions</h3>
+        <p>La condition est une chaîne de caractères qui permet d'évaluer si la scène est disponible sur la carte de Paris.</p>
+        <p>Par exemple, la condition "root" indique que la scène est disponible dès le début de l'aventure.</p>
+        <p>Une condition peut combiner plusieurs scènes et booléens, à l'aide des opérateurs et symboles "(,),|,&,!".</p>
+        <p>Les paranthèses servent à définir les priorités des opérateurs logiques.</p>
+        <p>Le symbole | (pipe) est le symbole de OU (scene_A ou scene_B)</p>
+        <p>Le symbole & définit ET (valide si scene_A et scene_B terminées)</p>
+        <p>Le symbole ! (not) définit une négation (utilisé seulement avec les Bools).<p>
         <h3>Les notes</h3>
         <p>Les notes d'une scène ne sont pas utilisées dans le jeu.</p>
         <p>Elles permettent aux scénaristes d'ajouter un commentaire ou un résumé de la scène afin de mieux comprendre ce que chaque scène fait.</p>
         <p>Pour des raisons de simplicité, <b>il est interdit d'utiliser des guillemets dans les notes !</b></p>
+        <br>
+        <p>Enfin, le bouton "Nouvelle" permet de créer la scène.</p>
+        <p>Une fois crée, celle-ci peut être déplacée pour plus de lisibilité du graphe.</p>
 
         <h1>Modifier une scène</h1>
         <p>Il est possible de modifier une scène en cliquant sur le nom de celle-ci.</p>
@@ -36,14 +41,20 @@
         <p>Le label ne peut pas être modifiés pour l'instant. Pour cela, cliquez sur le nom de la scène pour l'éditer, changez le nom et créez une nouvelle scène, puis supprimez l'ancienne.</p>
 
         <h1>Supprimer une scène</h1>
-        <p>Pour supprimer une scène, cliquez sur le nom de la scène et cliquez sur le bouton 'Supprimer"</p>
+        <p>Pour supprimer une scène, cliquez sur le nom de la scène et cliquez sur le bouton "Supprimer"</p>
 
+        <h1>Les Booleens</h1>
+        <p>Les bools représentent des choix que le joueur fait qui va influencer le parcours du graphe.</p>
+        <p>Par exemple: suivre une inconnue dans la rue ou aller ailleurs.</p>
+        <p>Le bool bool_follow_girl permet de se souvenir du choix du joueur et une nouvelle destination va se présenter au joueur en fonction de son choix.</p>
+        <p>Certaines scènes, dans leur condition, supposeront "bool_follow_girl" ou "! bool_follow_girl".</p>
+        
         <h1>Nouveau Bool</h1>
         <p>Pour Créer un Bool, renseigner les champs et cliquez sur "Nouveau"</p>
         <h3>Label parent</h3>
-        <p>Le nom du label de la scène dans laquelle le booléen est affecté (choix crucial qui changera la suite)</p>
+        <p>Le nom du label de la scène dans laquelle le booléen est affecté.</p>
         <h3>Nom du Bool</h3>
-        <p>Un nom parlant pour le booléen</p>
+        <p>Un nom parlant pour le booléen (bool_follow_girl). Ce nom doit commencer par "bool_"</p>
 
         <h1>Modifier Bool</h1>
         <p>Pour modifier un Bool, cliquez sur le nom du Bool et cliquez sur le bouton 'Supprimer"</p>
