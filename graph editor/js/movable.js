@@ -38,6 +38,9 @@ function dragElement(elmnt) {
     if(elmnt.id.includes("scene_")) {
         sceneGraph[elmnt.id].htmlCoordinates = "" + (elmnt.offsetTop - pos2) + " " + (elmnt.offsetLeft - pos1);
     }
+    if(elmnt.id.includes("bool_")) {
+        boolGraph[elmnt.id].htmlCoordinates = "" + (elmnt.offsetTop - pos2) + " " + (elmnt.offsetLeft - pos1);
+    }
   }
 
   function closeDragElement() {

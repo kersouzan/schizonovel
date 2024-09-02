@@ -64,7 +64,7 @@ function updateScene() {
     
     // Update html
     var newDiv = document.getElementById(label);
-    newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
+    newDiv.innerHTML = scene.generateHtml();
     dragElement(document.getElementById(label));
 }
 

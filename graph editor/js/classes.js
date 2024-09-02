@@ -45,20 +45,32 @@ class Scene {
         this.conditions = conditions;
         this.notes = notes;        
     }
+    
+    generateHtml() {
+        var htmlCode = "<div class=\"movableheader\" id=\""+this.label+"header\">Déplacer</div>";
+        htmlCode += "<div class=\"tooltip\">";
+        htmlCode += "<img src=\"../src/Schizonovel/game/images/places/"+this.icone+"\" width=\"50px\" height=\"50px\"/>";
+        htmlCode += "<span class=\"tooltiptext\">"+this.notes+"</span>";
+        htmlCode += "</div>";
+        htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
+        return htmlCode;
+    }
 }
 
 let sceneGraph = {};
 
 class Bool {
-    constructor(parentScene, name) {
+    constructor(parentScene, name, htmlCoordinates) {
         this.parentScene = parentScene;
         this.label = label;
+        this.htmlCoordinates = htmlCoordinates;
     }
     
     saveToXml() {
         var xml = "\t<Bool id=\""+this.label+"\">\n";
         xml += "\t\t<label>"+this.label+"</label>\n";
         xml += "\t\t<parentScene>"+this.parentScene+"</parentScene>\n";
+        xml += "\t\t<htmlCoordinates>"+this.htmlCoordinates+"</htmlCoordinates>\n";
         xml += "\t</Bool>\n";
         return xml;
     }
@@ -66,14 +78,24 @@ class Bool {
     loadFromXml(xmlElt) {
         var label = "";
         var parentScene = "";
+        var htmlCoordinates = "";
         
         for(let i = 0; i < xmlElt.children.length; i++) {
+            if(xmlElt.children[i].childNodes[0] == null) continue;
             if(xmlElt.children[i].nodeName == "label") label = xmlElt.children[i].childNodes[0].nodeValue;
             if(xmlElt.children[i].nodeName == "parentScene") parentScene = xmlElt.children[i].childNodes[0].nodeValue;
+            if(xmlElt.children[i].nodeName == "htmlCoordinates") htmlCoordinates = xmlElt.children[i].childNodes[0].nodeValue;
         }
 
         this.label = label;
         this.parentScene = parentScene;
+        this.htmlCoordinates = htmlCoordinates;
+    }
+
+    generateHtml() {
+        var htmlCode = "<div class=\"movableheader\" id=\""+this.label+"header\">Déplacer</div>";
+        htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
+        return htmlCode;
     }
 }
 

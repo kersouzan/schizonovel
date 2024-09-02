@@ -6,10 +6,10 @@ function fillBool(label) {
     alert("fill bool");
 }
 
-function updateScene() {
+function updateBool() {
     alert("update bool");
 }
 
-function removeScene() {
+function removeBool() {
     alert("remove bool");
 }

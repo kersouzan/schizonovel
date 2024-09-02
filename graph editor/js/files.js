@@ -16,19 +16,12 @@ function saveGraph() {
     for(var key in sceneGraph) {
         content += sceneGraph[key].saveToXml();
     }
+    for(var key in boolGraph) {
+        content += boolGraph[key].saveToXml();
+    }
     content += "</graph>\n";
     
     download(graphFilename, content);
-}
-
-function newDivInnerHTML(label, icone, notes) {
-    var htmlCode = "<div class=\"movableheader\" id=\""+label+"header\">Déplacer</div>";
-    htmlCode += "<div class=\"tooltip\">";
-    htmlCode += "<img src=\"../src/Schizonovel/game/images/places/"+icone+"\" width=\"50px\" height=\"50px\"/>";
-    htmlCode += "<span class=\"tooltiptext\">"+notes+"</span>";
-    htmlCode += "</div>";
-    htmlCode += "<br><button onclick=\"fillForm('"+label+"');\">"+label+"</button>";
-    return htmlCode;
 }
 
 function parseXML(content) {
@@ -43,7 +36,6 @@ function parseXML(content) {
         var scene = new Scene("", "", "", "", "", "");
         scene.loadFromXml(scenes[i]);
         
-        // TODO new div with scene
         var newDiv = document.createElement("div");
         newDiv.classList.add('scene');
         var htmlCoords = scene.htmlCoordinates.split(" ");
@@ -51,15 +43,34 @@ function parseXML(content) {
         newDiv.style.left = htmlCoords[1]+"px";
         //var newDiv = document.createDocumentFragment();
         var label = scene.label;
-        var icone = scene.icone;
-        var notes = scene.notes;
         newDiv.setAttribute("id",label);
-        newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
+        newDiv.innerHTML = scene.generateHtml();
         graph.appendChild(newDiv);
 
         sceneGraph[scene.label] = scene;
         dragElement(document.getElementById(scene.label));
     }
+    
+    boolGraph = {};
+    var bools = xmlDoc.getElementsByTagName("Bool");
+    for(let i = 0; i < bools.length; i++) {
+        var bool = new Bool("", "", "");
+        bool.loadFromXml(bools[i]);
+        
+        var newDiv = document.createElement("div");
+        newDiv.classList.add('bool');
+        var htmlCoords = bool.htmlCoordinates.split(" ");
+        newDiv.style.top = htmlCoords[0]+"px";
+        newDiv.style.left = htmlCoords[1]+"px";
+        //var newDiv = document.createDocumentFragment();
+        var label = bool.label;
+        newDiv.setAttribute("id",label);
+        newDiv.innerHTML = bool.generateHtml();
+        graph.appendChild(newDiv);
+
+        boolGraph[bool.label] = bool;
+        dragElement(document.getElementById(bool.label));
+    }    
 }
 
 function loadGraph() {
