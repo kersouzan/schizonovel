@@ -1,5 +1,4 @@
-movable scene
-
+display lines:
 couleur de lignes different en fonction de la regex
 Meme couleur pour une regex and
 couleur differente pour regex or
@@ -8,12 +7,6 @@ possible rectangle de couleur pour mieux voir les arcs
 
 Supprimer scene
 
-pas de guillemets dans les notes.
-
-link on label to update scene in form et then update scene in graph
-
 search label
-
-display lines
 
 afficher icone: definir le chemin par default s'il accepte les relatifs.
