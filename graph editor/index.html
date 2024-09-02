@@ -1,0 +1,52 @@
+<!doctype html>
+<html dir="ltr" lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Graph Editor</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="inspector">
+        <div id="inspectorheader" class="movableheader">Clique ici pour me déplacer</div>
+        <form action="" method="GET">
+            <input type="text" id="search" name="search" required size="10"/>
+            <input type="button" id="submitSearch" name="searchSceneName" value="Chercher" onClick="searchScene();"/>
+        </form>
+        <br>
+        <span class="button" onClick="loadGraph();">Charger</span>
+        <span class="button" onClick="saveGraph();">Sauvegarder</span>
+        <span class="button" onClick="checkErrors();">Vérifier les erreurs</span>
+        <br>
+        <br>
+        <br>
+        <form id="inspector_form" action="" method="GET">
+            Label: <input type="text" id="label" name="label" required minlength="6" size="10"/><br>
+            Vignette: <input type="text" id="icone" name="icone" required size="10"/><input type="button" id="browseIco" name="browseIcoButton" value="Parcourir" onClick="pickIcone(this.form)"/><br>
+            Coordonnées: <input type="text" id="coordinates" name="coordinates" required size="10"/><br>
+            Labels regex: <input type="text" id="labelsRegex" name="labelsRegex" required size="10"/><br>
+            Variables regex: <input type="text" id="varsRegex" name="varsRegex" size="10"/><br>
+            Notes/Résumé de la scène:<br>
+            <textarea id="notes" name="notes" rows="2" cols="20"></textarea><br>
+            <input type="button" id="submitNew" name="newSceneButton" value="Créer nouvelle" onClick="newScene(this.form)"/>
+            <input type="button" id="submitUpdate" name="updateSceneButton" value="Mettre à jour" onClick="updateScene(this.form)"/>
+        </form>
+    </div>
+    <div id="root">
+        <img src="img/x.png" width="50px" height="50px"/>
+        <br>
+        Départ
+    </div>
+    <div id="graph">
+    </div>
+    <div id="console">
+    </div>
+    <script type="text/javascript" src="js/classes.js"></script>
+    <script type="text/javascript" src="js/browse ico.js"></script>
+    <script type="text/javascript" src="js/searchScene.js"></script>
+    <script type="text/javascript" src="js/check errors.js"></script>
+    <script type="text/javascript" src="js/display lines.js"></script>
+    <script type="text/javascript" src="js/files.js"></script>
+    <script type="text/javascript" src="js/movable.js"></script>
+    <script type="text/javascript" src="js/submitForm.js"></script>
+  </body>
+</html>
