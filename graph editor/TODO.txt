@@ -9,7 +9,9 @@ notes on hover
 
 
 
---- Améliorations possibles ---
+--- Améliorations à faire plus tard ---
+
+Modifier label, icone, et notes d'une scene
 
 search label
 

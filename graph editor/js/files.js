@@ -21,6 +21,16 @@ function saveGraph() {
     download(graphFilename, content);
 }
 
+function newDivInnerHTML(label, icone, notes) {
+    var htmlCode = "<div class=\"movableheader\" id=\""+label+"header\">Déplacer</div>";
+    htmlCode += "<div class=\"tooltip\">";
+    htmlCode += "<img src=\"../src/Schizonovel/game/images/places/"+icone+"\" width=\"50px\" height=\"50px\"/>";
+    htmlCode += "<span class=\"tooltiptext\">"+notes+"</span>";
+    htmlCode += "</div>";
+    htmlCode += "<br><button onclick=\"fillForm('"+label+"');\">"+label+"</button>";
+    return htmlCode;
+}
+
 function parseXML(content) {
     parser = new DOMParser();
     xmlDoc = parser.parseFromString(content,"text/xml");
@@ -42,8 +52,9 @@ function parseXML(content) {
         //var newDiv = document.createDocumentFragment();
         var label = scene.label;
         var icone = scene.icone;
+        var notes = scene.notes;
         newDiv.setAttribute("id",label);
-        newDiv.innerHTML = "<div class=\"movableheader\" id=\""+label+"header\">Déplacer</div><img src=\"../src/Schizonovel/game/images/places/"+icone+"\" width=\"50px\" height=\"50px\"/><br><button onclick=\"fillForm('"+label+"');\">"+label+"</button>";
+        newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
         graph.appendChild(newDiv);
 
         sceneGraph[scene.label] = scene;

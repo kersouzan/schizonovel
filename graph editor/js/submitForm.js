@@ -3,7 +3,7 @@ function newScene(F) {
     var label = document.getElementsByName("label")[0].value;
     var coordinates = document.getElementsByName("coordinates")[0].value;
     var labelsRegex = document.getElementsByName("labelsRegex")[0].value;
-    var varsRegex = document.getElementsByName("varsRegex")[0].value;
+    //var varsRegex = document.getElementsByName("varsRegex")[0].value;
     var notes = document.getElementsByName("notes")[0].value;
 
     // Returns if scene already exists
@@ -12,12 +12,17 @@ function newScene(F) {
         return;
     }
     
+    if(!label.startsWith("scene_")) {
+        displayConsole("Le nom de la scene doit commencer par 'scene_'.");
+        return;
+    }
+    
     let graph = document.getElementById("graph");
     var newDiv = document.createElement("div");
     newDiv.classList.add('scene');
     //var newDiv = document.createDocumentFragment();
     newDiv.setAttribute("id",label);
-    newDiv.innerHTML = "<div class=\"movableheader\" id=\""+label+"header\">Déplacer</div><img src=\"../src/Schizonovel/game/images/places/"+icone+"\" width=\"50px\" height=\"50px\"/><br><button onclick=\"fillForm('"+label+"');\">"+label+"</button>";
+    newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
     graph.appendChild(newDiv);
     
     // Add to graph structure
@@ -64,6 +69,8 @@ function updateScene(F) {
     
     // Update html
     // Nothing to do for now but label and icone later.
+    var newDiv = document.getElementById(label);
+    newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
 }
 
 function removeScene(F) {
