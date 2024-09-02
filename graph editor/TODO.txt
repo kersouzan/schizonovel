@@ -1,20 +1,29 @@
---- A faire d'urgence ---
+--- A faire en premier ---
 
 display lines:
 couleur de lignes different en fonction de la regex
 Meme couleur pour une regex and
 couleur differente pour regex or
 
-notes on hover
+changer regex pour autre nom plus approprié
+
+Réfléchir à des variables booléennes qui permettent de coder les choix.
+Creer comme les scenes, avec un label parent (scene dans laquelle le choix est fait).
+Et utilisé dans les regex comme une scène normale (avec & | !).
+Nouvelle structure boolGraph identique à sceneGraph
+
+CheckErrors()
 
 
 
---- Améliorations à faire plus tard ---
+--- A faire plus tard ---
 
-Modifier label, icone, et notes d'une scene
+Modifier le nom de la scene en ajoutant un input hidden avec l'ancien label.
 
 search label
 
 afficher icone: definir le chemin par default s'il accepte les relatifs.
 
-possible rectangle de couleur pour mieux voir les arcs
+possible rectangles de couleur pour mieux voir les arcs
+
+

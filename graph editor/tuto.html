@@ -9,35 +9,61 @@
         <p>Le but du graph editor est de structurer la narration et l'enchaînnement des scènes sous forme de graphe.</p>
         <p>Le joueur commence sur la carte de Paris.</p>
         <p>Les destinations à visiter sont déterminées par le parcours du graphe.</p>
+
         <h1>Nouvelle scène</h1>
         <p>Pour créer une scène, il faut utiliser la fenêtre flotante repositionnable<p>
-        <p><b>label</b> est le nom de la scène. Il doit impérativement commencer par "scene_"<p>
-        <p><b>vignette</b> est l'image qui sera visible sur la carte de Paris</p>
-        <p><b>Coordonnées</b> sont les coordonnées d'affichage de la vignette sur la carte de Paris</p>
-        <p><b>Label Regex</b> est une expression régulière qui permet d'évaluer si la scène est disponible sur la carte de Paris.</p>
+        <h3>label</h3>
+        <p>label est le nom de la scène. Il doit impérativement commencer par "scene_"<p>
+        <h3>vignette</h3>
+        <p>La vignette est l'image qui sera visible sur la carte de Paris</p>
+        <h3>Coordonnées</h3>
+        <p>Les coordonnées sont les coordonnées d'affichage de la vignette sur la carte de Paris</p>
+        <p>Utilisez coordinates.html pour les calculer</p>
+        <h3>Label Regex</h3>
+        <p>Label regex est une expression régulière qui permet d'évaluer si la scène est disponible sur la carte de Paris.</p>
         <p>Par exemple, la regex "root" indique que la scène est disponible dès le début de l'aventure.</p>
         <p>Une regex peut cominer plusieurs scènes. Si la scène doit s'afficher si le joueur a complété la scène A ou la scène B. Une regex peut résumer cela par la regex: "scene_a | scene_b"</p>
         <p>Enfin, le bouton "Créer nouvelle" permet de créer la scène.</p>
         <p>Une fois crée, celle-ci peut être déplacer pour plus de lisibilité du graphe.</p>
-        <p><b>Les notes</b> d'une scène ne sont pas utilisées dans le jeu.</p>
+        <h3>Les notes</h3>
+        <p>Les notes d'une scène ne sont pas utilisées dans le jeu.</p>
         <p>Elles permettent aux scénaristes d'ajouter un commentaire ou un résumé de la scène afin de mieux comprendre ce que chaque scène fait.</p>
         <p>Pour des raisons de simplicité, <b>il est interdit d'utiliser des guillemets dans les notes !</b></p>
+
         <h1>Modifier une scène</h1>
         <p>Il est possible de modifier une scène en cliquant sur le nom de celle-ci.</p>
         <p>Une fois les propriétés modifiées, le bouton "Mettre à jour" permet de modifier la scène.</p>
-        <p>Le label et la vignette ne peuvent pas être modifiés pour l'instnat. Pour cela, supprimez la scène et recréez en une nouvelle.</p>
+        <p>Le label ne peut pas être modifiés pour l'instant. Pour cela, cliquez sur le nom de la scène pour l'éditer, changez le nom et créez une nouvelle scène, puis supprimez l'ancienne.</p>
+
         <h1>Supprimer une scène</h1>
-        <p>Pour supprimer une scène, cliquez sur le nom de la scène et cliquez sur le bouton 'Supprimer scène"</p>
+        <p>Pour supprimer une scène, cliquez sur le nom de la scène et cliquez sur le bouton 'Supprimer"</p>
+
+        <h1>Nouveau Bool</h1>
+        <p>Pour Créer un Bool, renseigner les champs et cliquez sur "Nouveau"</p>
+        <h3>Label parent</h3>
+        <p>Le nom du label de la scène dans laquelle le booléen est affecté (choix crucial qui changera la suite)</p>
+        <h3>Nom du Bool</h3>
+        <p>Un nom parlant pour le booléen</p>
+
+        <h1>Modifier Bool</h1>
+        <p>Pour modifier un Bool, cliquez sur le nom du Bool et cliquez sur le bouton 'Supprimer"</p>
+
+        <h1>Supprimer Bool</h1>
+        <p>Pour supprimer un Bool, cliquez sur le nom du Bool et cliquez sur le bouton 'Supprimer"</p>
+
         <h1>Sauvegarder/Charger un graphe</h1>
         <p>Il y a aura plusieurs graphe dans le jeu. Le premier étant la trame de base du joueur et d'autres lorsque surviennent des BDAs.</p>
-        <p>Pour charger un graphe existant, il suffit de cliquer sur "Charger" et de sélectionner le fichier à lire</p>
+        <p>Pour charger un graphe existant, il suffit de cliquer sur "Charger" et de sélectionner le fichier à lire.</p>
         <p>Pour des raisons de sécurité, un navigateur web ne peut pas modifier les fichiers sur l'ordinateur.</p>
         <p>Ainsi, pour sauvegarder notre travail, le bouton "Sauvegarder" crée et télécharge un fichier avec le même nom que celui qui a été chargé.</p>
         <p>Il vous revient de déplacer le fichier depuis votre dossier téléchargement dans le dossier du projet.</p>
+
         <h1>Recherche dans le graphe</h1>
         <p>Lorsque le projet nécessitera un graphe volumineux, il sera possible de faire une recherche de scène à l'aide du bouton "Chercher" en haut de la fenêtre flotante.</p>
+
         <h1>Vérifier les erreurs</h1>
         <p>Il est possible d'effectuer une recherche d'erreurs dans le graphe afin de faciliter la maintenance du graphe</p>
+
         <h1>Merci d'avoir lu ce tuto et bon code !</h1>
     </body>
 </html>

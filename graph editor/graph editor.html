@@ -20,16 +20,23 @@
         <br>
         <br>
         <form id="inspector_form" action="" method="GET">
+            Scènes<br>
             Label: <input type="text" id="label" name="label" required minlength="6" size="10"/><br>
             Vignette: <input type="text" id="icone" name="icone" required size="10"/><input type="button" id="browseIco" name="browseIcoButton" value="Parcourir" onClick="pickIcone(this.form)"/><br>
             Coordonnées: <input type="text" id="coordinates" name="coordinates" required size="10"/><br>
-            Labels regex: <input type="text" id="labelsRegex" name="labelsRegex" required size="10"/><br>
-            <!--Variables regex: <input type="text" id="varsRegex" name="varsRegex" size="10"/><br>-->
+            Conditions: <input type="text" id="conditions" name="conditions" required size="10"/><br>
             Notes/Résumé de la scène:<br>
             <textarea id="notes" name="notes" rows="2" cols="20"></textarea><br>
-            <input type="button" id="submitNew" name="newSceneButton" value="Créer nouvelle" onClick="newScene(this.form)"/>
-            <input type="button" id="submitUpdate" name="updateSceneButton" value="Mettre à jour" onClick="updateScene(this.form)"/>
-            <input type="button" id="submitRemove" name="removeSceneButton" value="Supprimer" onClick="removeScene(this.form)"/>
+            <input type="button" id="submitNew" name="newSceneButton" value="Nouvelle" onClick="newScene()"/>
+            <input type="button" id="submitUpdate" name="updateSceneButton" value="Mettre à jour" onClick="updateScene()"/>
+            <input type="button" id="submitRemove" name="removeSceneButton" value="Supprimer" onClick="removeScene()"/><br>
+            <br>
+            Booléens<br>
+            Label scène: <input type="text" id="boolParent" name="boolParent" required minlength="6" size="10"/><br>
+            Nom du booleen: <input type="text" id="boolName" name="boolName" required minlength="6" size="10"/><br>
+            <input type="button" id="submitBoolCreate" name="updateBoolButton" value="Nouveau" onClick="createBool()"/>
+            <input type="button" id="submitBoolUpdate" name="updateBoolButton" value="Mettre à jour" onClick="updateBool()"/>
+            <input type="button" id="submitBoolRemove" name="removeBoolButton" value="Supprimer" onClick="removeBool()"/>
         </form>
     </div>
     <div id="root">
@@ -48,6 +55,7 @@
     <script type="text/javascript" src="js/display lines.js"></script>
     <script type="text/javascript" src="js/files.js"></script>
     <script type="text/javascript" src="js/movable.js"></script>
-    <script type="text/javascript" src="js/submitForm.js"></script>
+    <script type="text/javascript" src="js/submitBool.js"></script>
+    <script type="text/javascript" src="js/submitScene.js"></script>
   </body>
 </html>

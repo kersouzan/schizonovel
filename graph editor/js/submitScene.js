@@ -1,9 +1,8 @@
-function newScene(F) {
+function newScene() {
     var icone = document.getElementsByName("icone")[0].value;
     var label = document.getElementsByName("label")[0].value;
     var coordinates = document.getElementsByName("coordinates")[0].value;
-    var labelsRegex = document.getElementsByName("labelsRegex")[0].value;
-    //var varsRegex = document.getElementsByName("varsRegex")[0].value;
+    var conditions = document.getElementsByName("conditions")[0].value;
     var notes = document.getElementsByName("notes")[0].value;
 
     // Returns if scene already exists
@@ -26,7 +25,7 @@ function newScene(F) {
     graph.appendChild(newDiv);
     
     // Add to graph structure
-    sceneGraph[label] = new Scene(label, icone, coordinates, "0 0", labelsRegex, notes);
+    sceneGraph[label] = new Scene(label, icone, coordinates, "0 0", conditions, notes);
     
     // Allow drag
     dragElement(document.getElementById(label));
@@ -39,17 +38,15 @@ function fillForm(label) {
     document.getElementsByName("icone")[0].value = scene.icone;
     document.getElementsByName("label")[0].value = scene.label;
     document.getElementsByName("coordinates")[0].value = scene.coordinates;
-    document.getElementsByName("labelsRegex")[0].value = scene.regex;
+    document.getElementsByName("conditions")[0].value = scene.conditions;
     document.getElementsByName("notes")[0].value = scene.notes;
 }
 
-function updateScene(F) {
-    // TODO update graph and div from form
-    
+function updateScene() {
     var icone = document.getElementsByName("icone")[0].value;
     var label = document.getElementsByName("label")[0].value;
     var coordinates = document.getElementsByName("coordinates")[0].value;
-    var regex = document.getElementsByName("labelsRegex")[0].value;
+    var conditions = document.getElementsByName("conditions")[0].value;
     var notes = document.getElementsByName("notes")[0].value;
     
     var scene = sceneGraph[label];
@@ -62,15 +59,16 @@ function updateScene(F) {
     scene.label = label;
     scene.icone = icone;
     scene.coordinates = coordinates;
-    scene.regex = regex;
+    scene.conditions = conditions;
     scene.notes = notes;
     
     // Update html
     var newDiv = document.getElementById(label);
     newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
+    dragElement(document.getElementById(label));
 }
 
-function removeScene(F) {
+function removeScene() {
     var label = document.getElementsByName("label")[0].value;
 
     var scene = sceneGraph[label];
