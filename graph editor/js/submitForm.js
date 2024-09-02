@@ -66,3 +66,13 @@ function updateScene(F) {
     // Nothing to do for now but label and icone later.
 }
 
+function removeScene(F) {
+    var label = document.getElementsByName("label")[0].value;
+
+    var scene = sceneGraph[label];
+    if(scene == null) return;
+    
+    delete sceneGraph[label];
+    
+    var htmlDiv = document.getElementById(label).remove();
+}

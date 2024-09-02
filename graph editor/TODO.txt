@@ -1,12 +1,18 @@
+--- A faire d'urgence ---
+
 display lines:
 couleur de lignes different en fonction de la regex
 Meme couleur pour une regex and
 couleur differente pour regex or
 
-possible rectangle de couleur pour mieux voir les arcs
+notes on hover
 
-Supprimer scene
+
+
+--- Améliorations possibles ---
 
 search label
 
 afficher icone: definir le chemin par default s'il accepte les relatifs.
+
+possible rectangle de couleur pour mieux voir les arcs
