@@ -53,13 +53,11 @@ function updateScene(F) {
     var notes = document.getElementsByName("notes")[0].value;
     
     var scene = sceneGraph[label];
-    if(scene == null) return;
-    
-    if(scene.label != label || scene.icone != icone) {
-        displayConsole("Impossible de changer le nom ou l'image pour l'instant. Recréez une nouvelle scène.");
-        return;
+    if(scene == null) {
+        displayConsole("Impossible de changer le nom d'une scene pour l'instant. Recréez une nouvelle scène.");
+        return;        
     }
-
+    
     // Update in javascript graph
     scene.label = label;
     scene.icone = icone;
@@ -68,7 +66,6 @@ function updateScene(F) {
     scene.notes = notes;
     
     // Update html
-    // Nothing to do for now but label and icone later.
     var newDiv = document.getElementById(label);
     newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
 }
