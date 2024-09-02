@@ -13,14 +13,7 @@ Sinon, il suffit au joueur d'attendre devant son écran pour pouvoir reprendre d
 
 
 
-Graphe de scène:
-Lister les scènes avec:
-- label (identifiant)
-- booléen BDA
-- image vignette
-- coordonnées
-- labels requis
-- variables requises (arc, etapes clés)
+Utiliser un graphe de scène pour map.
 
 
 
