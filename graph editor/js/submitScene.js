@@ -16,18 +16,21 @@ function newScene() {
         return;
     }
     
-    let graph = document.getElementById("graph");
+    var graphElement = new Scene(label, icone, coordinates, "0 0", conditions, notes);
+    let graphDiv = document.getElementById("graphDiv");
     var newDiv = document.createElement("div");
     newDiv.classList.add('scene');
     //var newDiv = document.createDocumentFragment();
     newDiv.setAttribute("id",label);
-    newDiv.innerHTML = newDivInnerHTML(label, icone, notes);
-    graph.appendChild(newDiv);
+    newDiv.innerHTML = graphElement.generateHtml(); //newDivInnerHTML(label, icone, notes);
+    graphDiv.appendChild(newDiv);
     
     // Add to graph structure
-    sceneGraph[label] = new Scene(label, icone, coordinates, "0 0", conditions, notes);
+    sceneGraph[label] = graphElement;
     
-    displayLines(sceneGraph[label].label);
+    // Add lines
+    var svg = document.getElementById("mainSvg");
+    svg.innerHTML += sceneGraph[label].displayLines();
     
     // Allow drag
     dragElement(document.getElementById(label));

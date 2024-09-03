@@ -35,10 +35,10 @@ function dragElement(elmnt) {
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     
     // Update html coordinates in sceneGraph
-    if(elmnt.id.includes("scene_")) {
+    if(elmnt.id.startsWith("scene_")) {
         sceneGraph[elmnt.id].htmlCoordinates = "" + (elmnt.offsetTop - pos2) + " " + (elmnt.offsetLeft - pos1);
     }
-    if(elmnt.id.includes("bool_")) {
+    if(elmnt.id.startsWith("bool_")) {
         boolGraph[elmnt.id].htmlCoordinates = "" + (elmnt.offsetTop - pos2) + " " + (elmnt.offsetLeft - pos1);
     }
   }

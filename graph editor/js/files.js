@@ -30,9 +30,9 @@ function parseXML(content) {
     
     sceneGraph = {};
     var scenes = xmlDoc.getElementsByTagName("Scene");
-    let graph = document.getElementById("graph");
-    graph.innerHTML = "";
-    var svg = document.createElement("mainSvg");
+    let graphDiv = document.getElementById("graphDiv");
+    graphDiv.innerHTML = "";
+    var svg = document.getElementById("mainSvg");
     svg.innerHTML = "";
     for(let i = 0; i < scenes.length; i++) {
         var scene = new Scene("", "", "", "", "", "");
@@ -44,14 +44,13 @@ function parseXML(content) {
         newDiv.style.top = htmlCoords[0]+"px";
         newDiv.style.left = htmlCoords[1]+"px";
         //var newDiv = document.createDocumentFragment();
-        var label = scene.label;
-        newDiv.setAttribute("id",label);
+        newDiv.setAttribute("id",scene.label);
         newDiv.innerHTML = scene.generateHtml();
-        graph.appendChild(newDiv);
+        graphDiv.appendChild(newDiv);
 
         sceneGraph[scene.label] = scene;
-        displayLines(scene.label);
         dragElement(document.getElementById(scene.label));
+        svg.innerHTML += scene.displayLines();
     }
     
     boolGraph = {};
@@ -69,11 +68,11 @@ function parseXML(content) {
         var label = bool.label;
         newDiv.setAttribute("id",label);
         newDiv.innerHTML = bool.generateHtml();
-        graph.appendChild(newDiv);
+        graphDiv.appendChild(newDiv);
 
         boolGraph[bool.label] = bool;
-        displayLines(bool.label);
         dragElement(document.getElementById(bool.label));
+        svg.innerHTML += bool.displayLines();
     }    
 }
 
@@ -100,50 +99,7 @@ function loadGraph() {
             parseXML(content);
         }
         graphFilename = file.name;
-        console.log("file "+file.name);
     }
 
     input.click();
-
-/*
-            var xmlhttp, xmlDoc;
-            xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", "note.xml", false);
-            xmlhttp.send();
-            xmlDoc = xmlhttp.responseXML;
-            document.getElementById("to").innerHTML=
-            xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
-            document.getElementById("from").innerHTML=
-            xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
-            document.getElementById("message").innerHTML=
-            xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
-*/
-
-/*
-    https://stackoverflow.com/questions/20996242/saving-xml-file-using-javascript
-    
-    xmlDoc = loadXMLDoc("books.xml");
-
-    x = xmlDoc.documentElement;
-
-    //create a book element, title element and a text node
-    newNode = xmlDoc.createElement("book");
-    newTitle = xmlDoc.createElement("title");
-    newText = xmlDoc.createTextNode("A Notebook");
-
-    //add the text node to the title node,
-    newTitle.appendChild(newText);
-    //add the title node to the book node
-    newNode.appendChild(newTitle);
-
-    y = xmlDoc.getElementsByTagName("book")[1]
-    //replace the first book node with the new node
-    x.replaceChild(newNode, y);
-
-    z = xmlDoc.getElementsByTagName("title");
-    for (i = 0; i < z.length; i++) {
-        alert(z[i].childNodes[0].nodeValue);
-
-    }  
-*/    
 }
