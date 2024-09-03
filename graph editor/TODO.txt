@@ -13,8 +13,6 @@ CheckErrors()
 
 --- A faire plus tard ---
 
-Remplacer les empty div. Trouver pourquoi incrémenter innerHTML du graph désactive le javascript.
-
 Modifier le nom de la scene en ajoutant un input hidden avec l'ancien label.
 
 search label

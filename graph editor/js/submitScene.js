@@ -18,9 +18,8 @@ function newScene() {
     
     var scene = new Scene(label, icone, coordinates, "0 0", conditions, notes);
     let graphDiv = document.getElementById("graphDiv");
-    var emptyDiv = document.createElement("div");
-    emptyDiv.innerHTML += scene.generateHtml();
-    graphDiv.appendChild(emptyDiv);
+    graphDiv.insertAdjacentHTML('beforeend', scene.generateHtml());
+
     
     // Add to graph structure
     sceneGraph[label] = scene;

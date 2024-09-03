@@ -37,9 +37,7 @@ function parseXML(content) {
     for(let i = 0; i < scenes.length; i++) {
         var scene = new Scene("", "", "", "", "", "");
         scene.loadFromXml(scenes[i]);
-        var emptyDiv = document.createElement("div");
-        emptyDiv.innerHTML += scene.generateHtml();
-        graphDiv.appendChild(emptyDiv);
+        graphDiv.insertAdjacentHTML('beforeend', scene.generateHtml());
         sceneGraph[scene.label] = scene;
         dragElement(document.getElementById(scene.label));
         //svg.innerHTML += scene.displayLines();
@@ -50,9 +48,7 @@ function parseXML(content) {
     for(let i = 0; i < bools.length; i++) {
         var bool = new Bool("", "", "");
         bool.loadFromXml(bools[i]);
-        var emptyDiv = document.createElement("div");
-        emptyDiv.innerHTML += bool.generateHtml();
-        graphDiv.appendChild(emptyDiv);
+        graphDiv.insertAdjacentHTML('beforeend', bool.generateHtml());
         boolGraph[bool.label] = bool;
         dragElement(document.getElementById(bool.label));
         //svg.innerHTML += bool.displayLines();
