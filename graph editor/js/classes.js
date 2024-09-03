@@ -55,6 +55,12 @@ class Scene {
         htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
         return htmlCode;
     }
+    
+    displayLines() {
+        // TODO analyse condition.
+        var html = "<line x1=\"0\" y1=\"0\" x2=\"300\" y2=\"200\" style=\"stroke:red;stroke-width:2\"/>";
+        return html;
+    }
 }
 
 let sceneGraph = {};
@@ -96,6 +102,12 @@ class Bool {
         var htmlCode = "<div class=\"movableheader\" id=\""+this.label+"header\">Déplacer</div>";
         htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
         return htmlCode;
+    }
+
+    displayLines() {
+        // TODO self to parent
+        var html = "<line x1=\"0\" y1=\"0\" x2=\"300\" y2=\"200\" style=\"stroke:red;stroke-width:2\"/>";
+        return html;
     }
 }
 

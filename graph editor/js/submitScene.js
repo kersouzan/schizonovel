@@ -27,6 +27,8 @@ function newScene() {
     // Add to graph structure
     sceneGraph[label] = new Scene(label, icone, coordinates, "0 0", conditions, notes);
     
+    displayLines(sceneGraph[label].label);
+    
     // Allow drag
     dragElement(document.getElementById(label));
 }
@@ -65,6 +67,7 @@ function updateScene() {
     // Update html
     var newDiv = document.getElementById(label);
     newDiv.innerHTML = scene.generateHtml();
+    displayLines(scene.label);
     dragElement(document.getElementById(label));
 }
 

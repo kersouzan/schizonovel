@@ -32,6 +32,8 @@ function parseXML(content) {
     var scenes = xmlDoc.getElementsByTagName("Scene");
     let graph = document.getElementById("graph");
     graph.innerHTML = "";
+    var svg = document.createElement("mainSvg");
+    svg.innerHTML = "";
     for(let i = 0; i < scenes.length; i++) {
         var scene = new Scene("", "", "", "", "", "");
         scene.loadFromXml(scenes[i]);
@@ -48,6 +50,7 @@ function parseXML(content) {
         graph.appendChild(newDiv);
 
         sceneGraph[scene.label] = scene;
+        displayLines(scene.label);
         dragElement(document.getElementById(scene.label));
     }
     
@@ -58,7 +61,7 @@ function parseXML(content) {
         bool.loadFromXml(bools[i]);
         
         var newDiv = document.createElement("div");
-        newDiv.classList.add('bool');
+        newDiv.classList.add("bool");
         var htmlCoords = bool.htmlCoordinates.split(" ");
         newDiv.style.top = htmlCoords[0]+"px";
         newDiv.style.left = htmlCoords[1]+"px";
@@ -69,6 +72,7 @@ function parseXML(content) {
         graph.appendChild(newDiv);
 
         boolGraph[bool.label] = bool;
+        displayLines(bool.label);
         dragElement(document.getElementById(bool.label));
     }    
 }

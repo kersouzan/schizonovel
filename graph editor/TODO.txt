@@ -5,12 +5,7 @@ couleur de lignes different en fonction de la regex
 Meme couleur pour une regex and
 couleur differente pour regex or
 
-changer regex pour autre nom plus approprié
-
-Réfléchir à des variables booléennes qui permettent de coder les choix.
-Creer comme les scenes, avec un label parent (scene dans laquelle le choix est fait).
-Et utilisé dans les regex comme une scène normale (avec & | !).
-Nouvelle structure boolGraph identique à sceneGraph
+submit Bool
 
 CheckErrors()
 
