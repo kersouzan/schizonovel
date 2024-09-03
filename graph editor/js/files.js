@@ -37,27 +37,25 @@ function parseXML(content) {
     for(let i = 0; i < scenes.length; i++) {
         var scene = new Scene("", "", "", "", "", "");
         scene.loadFromXml(scenes[i]);
-        graphDiv.innerHTML += scene.generateHtml();
+        var emptyDiv = document.createElement("div");
+        emptyDiv.innerHTML += scene.generateHtml();
+        graphDiv.appendChild(emptyDiv);
         sceneGraph[scene.label] = scene;
+        dragElement(document.getElementById(scene.label));
         //svg.innerHTML += scene.displayLines();
     }
 
-    for(var key in sceneGraph) {
-        dragElement(document.getElementById(key));
-    }
-    
     boolGraph = {};
     var bools = xmlDoc.getElementsByTagName("Bool");
     for(let i = 0; i < bools.length; i++) {
         var bool = new Bool("", "", "");
         bool.loadFromXml(bools[i]);
-        graphDiv.innerHTML += bool.generateHtml();
+        var emptyDiv = document.createElement("div");
+        emptyDiv.innerHTML += bool.generateHtml();
+        graphDiv.appendChild(emptyDiv);
         boolGraph[bool.label] = bool;
+        dragElement(document.getElementById(bool.label));
         //svg.innerHTML += bool.displayLines();
-    }
-    
-    for(var key in boolGraph) {
-        dragElement(document.getElementById(key));
     }
 }
 
