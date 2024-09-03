@@ -37,20 +37,13 @@ function parseXML(content) {
     for(let i = 0; i < scenes.length; i++) {
         var scene = new Scene("", "", "", "", "", "");
         scene.loadFromXml(scenes[i]);
-        
-        var newDiv = document.createElement("div");
-        newDiv.classList.add('scene');
-        var htmlCoords = scene.htmlCoordinates.split(" ");
-        newDiv.style.top = htmlCoords[0]+"px";
-        newDiv.style.left = htmlCoords[1]+"px";
-        //var newDiv = document.createDocumentFragment();
-        newDiv.setAttribute("id",scene.label);
-        newDiv.innerHTML = scene.generateHtml();
-        graphDiv.appendChild(newDiv);
-
+        graphDiv.innerHTML += scene.generateHtml();
         sceneGraph[scene.label] = scene;
-        dragElement(document.getElementById(scene.label));
-        svg.innerHTML += scene.displayLines();
+        //svg.innerHTML += scene.displayLines();
+    }
+
+    for(var key in sceneGraph) {
+        dragElement(document.getElementById(key));
     }
     
     boolGraph = {};
@@ -58,22 +51,14 @@ function parseXML(content) {
     for(let i = 0; i < bools.length; i++) {
         var bool = new Bool("", "", "");
         bool.loadFromXml(bools[i]);
-        
-        var newDiv = document.createElement("div");
-        newDiv.classList.add("bool");
-        var htmlCoords = bool.htmlCoordinates.split(" ");
-        newDiv.style.top = htmlCoords[0]+"px";
-        newDiv.style.left = htmlCoords[1]+"px";
-        //var newDiv = document.createDocumentFragment();
-        var label = bool.label;
-        newDiv.setAttribute("id",label);
-        newDiv.innerHTML = bool.generateHtml();
-        graphDiv.appendChild(newDiv);
-
+        graphDiv.innerHTML += bool.generateHtml();
         boolGraph[bool.label] = bool;
-        dragElement(document.getElementById(bool.label));
-        svg.innerHTML += bool.displayLines();
-    }    
+        //svg.innerHTML += bool.displayLines();
+    }
+    
+    for(var key in boolGraph) {
+        dragElement(document.getElementById(key));
+    }
 }
 
 function loadGraph() {
