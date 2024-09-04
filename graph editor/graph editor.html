@@ -23,12 +23,12 @@
         <br>
         <form id="inspector_form" action="" method="GET">
             Scènes<br>
-            Label: <input type="text" id="label" name="label" required minlength="6" size="10"/><br>
+            Label: <input type="text" id="label" name="label" required minlength="6" size="20"/><br>
             Vignette: <input type="text" id="icone" name="icone" required size="10"/><input type="button" id="browseIco" name="browseIcoButton" value="Parcourir" onClick="browseIcone(this.form)"/><br>
             Coordonnées: <input type="text" id="coordinates" name="coordinates" required size="10"/><br>
-            Conditions: <input type="text" id="conditions" name="conditions" required size="10"/><br>
+            Conditions: <input type="text" id="conditions" name="conditions" required size="20"/><br>
             Notes/Résumé de la scène:<br>
-            <textarea id="notes" name="notes" rows="2" cols="20"></textarea><br>
+            <textarea id="notes" name="notes" rows="2" cols="30"></textarea><br>
             <input type="button" id="submitNew" name="newSceneButton" value="Nouvelle" onClick="newScene()"/>
             <input type="button" id="submitUpdate" name="updateSceneButton" value="Mettre à jour" onClick="updateScene()"/>
             <input type="button" id="submitRemove" name="removeSceneButton" value="Supprimer" onClick="removeScene()"/><br>
