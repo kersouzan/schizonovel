@@ -1,3 +1,24 @@
+function encodeXml(unsafe) {
+    return unsafe.replace(/[<>&'"]/g, function (c) {
+        switch (c) {
+            case '<': return '&lt;';
+            case '>': return '&gt;';
+            case '&': return '&amp;';
+            case '\'': return '&apos;';
+            case '"': return '&quot;';
+        }
+    });
+}
+
+function decodeXml(safe) {
+    safe.replace('&lt;', '<');
+    safe.replace('&gt;', '>');
+    safe.replace('&amp;', '&');
+    safe.replace('&apos;', '\'');
+    safe.replace('&quot;', '"');
+    return safe;
+}
+
 class Scene {
     constructor(label, icone, coordinates, htmlCoordinates, conditions, notes) {
         this.label = label;
@@ -14,7 +35,7 @@ class Scene {
         xml += "\t\t<icone>"+this.icone+"</icone>\n";
         xml += "\t\t<coordinates>"+this.coordinates+"</coordinates>\n";
         xml += "\t\t<htmlCoordinates>"+this.htmlCoordinates+"</htmlCoordinates>\n";
-        xml += "\t\t<conditions>"+this.conditions+"</conditions>\n";
+        xml += "\t\t<conditions>"+escapeXml(this.conditions)+"</conditions>\n";
         xml += "\t\t<notes>"+this.notes+"</notes>\n";
         xml += "\t</Scene>\n";
         return xml;
@@ -34,7 +55,7 @@ class Scene {
             if(xmlElt.children[i].nodeName == "icone") icone = xmlElt.children[i].childNodes[0].nodeValue;
             if(xmlElt.children[i].nodeName == "coordinates") coordinates = xmlElt.children[i].childNodes[0].nodeValue;
             if(xmlElt.children[i].nodeName == "htmlCoordinates") htmlCoordinates = xmlElt.children[i].childNodes[0].nodeValue;
-            if(xmlElt.children[i].nodeName == "conditions") conditions = xmlElt.children[i].childNodes[0].nodeValue;
+            if(xmlElt.children[i].nodeName == "conditions") conditions = decodeXml(xmlElt.children[i].childNodes[0].nodeValue);
             if(xmlElt.children[i].nodeName == "notes") notes = xmlElt.children[i].childNodes[0].nodeValue;
         }
 

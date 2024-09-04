@@ -70,7 +70,6 @@ function loadGraph() {
         // here we tell the reader what to do when it's done reading...
         reader.onload = readerEvent => {
             content = readerEvent.target.result; // this is the content!
-            //console.log( content );
             
             parseXML(content);
         }
