@@ -72,7 +72,7 @@ class Scene {
         var htmlCode = "<div class=\"scene\" id=\""+this.label+"\" style=\"top: "+htmlCoords[0]+"px; left: "+htmlCoords[1]+"px;\">";
         htmlCode += "<div class=\"movableheader\" id=\""+this.label+"header\">Déplacer</div>";
         htmlCode += "<div class=\"tooltip\">";
-        htmlCode += "<img src=\"../src/Schizonovel/game/images/places/"+this.icone+"\" width=\"50px\" height=\"50px\"/>";
+        htmlCode += "<img src=\"../src/Schizonovel/game/images/places/"+this.icone+"\" width=\"75px\" height=\"75px\"/>";
         htmlCode += "<span class=\"tooltiptext\">"+this.notes+"</span>";
         htmlCode += "</div>";
         htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
