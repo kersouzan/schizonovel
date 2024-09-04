@@ -1,12 +1,5 @@
 --- A faire en premier ---
 
-display lines:
-couleur de lignes different en fonction de la regex
-Meme couleur pour une regex and
-couleur differente pour regex or
-
-submit Bool
-
 CheckErrors()
 
 
@@ -15,10 +8,6 @@ CheckErrors()
 
 Modifier le nom de la scene en ajoutant un input hidden avec l'ancien label.
 
-search label
-
-afficher icone: definir le chemin par default s'il accepte les relatifs.
-
 possible rectangles de couleur pour mieux voir les arcs
 
-
+display lines de différentes couleurs

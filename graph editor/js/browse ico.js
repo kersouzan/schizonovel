@@ -1,4 +1,4 @@
-function pickIcone() {
+function browseIcone() {
     var input = document.createElement('input');
     input.type = 'file';
     

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<graph>
+	<Scene id="scene_plop">
+		<label>scene_plop</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>193 801</htmlCoordinates>
+		<conditions>root</conditions>
+		<notes>Ballade en forêt</notes>
+	</Scene>
+	<Scene id="scene_plop2">
+		<label>scene_plop2</label>
+		<icone>ico_notredame.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>207 561</htmlCoordinates>
+		<conditions>root</conditions>
+		<notes>Visite de notre dame de Paris.</notes>
+	</Scene>
+	<Scene id="scene_plop25">
+		<label>scene_plop25</label>
+		<icone>ico_notredame.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>398 588</htmlCoordinates>
+		<conditions>scene_plop2</conditions>
+		<notes>Deuxième tableau de notre dmae de Paris.</notes>
+	</Scene>
+	<Scene id="scene_plop5">
+		<label>scene_plop5</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>379 834</htmlCoordinates>
+		<conditions>scene_plop</conditions>
+		<notes>Voit un renard et le photoraphie</notes>
+	</Scene>
+	<Scene id="scene_plop50">
+		<label>scene_plop50</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>545 714</htmlCoordinates>
+		<conditions>(scene_plop25 &amp; scene_plop5)</conditions>
+		<notes>Retourne dans la foret pour photographier des animaux mais voit une mystérieuse jeune fille.</notes>
+	</Scene>
+	<Scene id="scene_plop51">
+		<label>scene_plop51</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>815 844</htmlCoordinates>
+		<conditions>scene_plop50 &amp; bool_follow_girl</conditions>
+		<notes>Suit la jeune fille jusqu'à chez elle.</notes>
+	</Scene>
+	<Scene id="scene_plop52">
+		<label>scene_plop52</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>815 600</htmlCoordinates>
+		<conditions>scene_plop50 &amp; !bool_follow_girl</conditions>
+		<notes>Rentre à son appart.</notes>
+	</Scene>
+	<Bool id="bool_follow_girl">
+		<label>bool_follow_girl</label>
+		<parentScene>scene_plop50</parentScene>
+		<htmlCoordinates>702 716</htmlCoordinates>
+	</Bool>
+</graph>
