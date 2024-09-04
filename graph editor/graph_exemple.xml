@@ -14,7 +14,7 @@
 		<coordinates>100 100</coordinates>
 		<htmlCoordinates>394 572</htmlCoordinates>
 		<conditions>scene_notredame</conditions>
-		<notes>Deuxième tableau de notre dmae de Paris.</notes>
+		<notes>Deuxième tableau de notre dame de Paris.</notes>
 	</Scene>
 	<Scene id="scene_forest">
 		<label>scene_forest</label>
@@ -30,7 +30,7 @@
 		<coordinates>100 100</coordinates>
 		<htmlCoordinates>379 834</htmlCoordinates>
 		<conditions>scene_forest</conditions>
-		<notes>Voit un renard et le photoraphie</notes>
+		<notes>Voit un renard et le photographie</notes>
 	</Scene>
 	<Scene id="scene_forest3">
 		<label>scene_forest3</label>
