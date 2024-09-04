@@ -41,9 +41,9 @@
 }
 
 #console {
-    position: absolute;
+    position: fixed;
     text-align: center;
-    bottom: 0px;
+    bottom: 100px;
     width: 100%;
     color: #FF1111;
     font-size: 2vw;
