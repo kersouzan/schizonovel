@@ -1,21 +1,5 @@
 <?xml version="1.0"?>
 <graph>
-	<Scene id="scene_plop51">
-		<label>scene_plop51</label>
-		<icone>ico_forest.png</icone>
-		<coordinates>100 100</coordinates>
-		<htmlCoordinates>815 844</htmlCoordinates>
-		<conditions>scene_forest3 &amp; bool_follow_girl</conditions>
-		<notes>Suit la jeune fille jusqu'à chez elle.</notes>
-	</Scene>
-	<Scene id="scene_plop52">
-		<label>scene_plop52</label>
-		<icone>ico_forest.png</icone>
-		<coordinates>100 100</coordinates>
-		<htmlCoordinates>815 600</htmlCoordinates>
-		<conditions>scene_forest3 &amp; !bool_follow_girl</conditions>
-		<notes>Rentre à son appart.</notes>
-	</Scene>
 	<Scene id="scene_notredame">
 		<label>scene_notredame</label>
 		<icone>ico_notredame.png</icone>
@@ -55,6 +39,22 @@
 		<htmlCoordinates>544 717</htmlCoordinates>
 		<conditions>(scene_notredame2 &amp; scene_forest2)</conditions>
 		<notes>Retourne dans la foret pour photographier des animaux mais voit une mystérieuse jeune fille.</notes>
+	</Scene>
+	<Scene id="scene_appart">
+		<label>scene_appart</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>812 601</htmlCoordinates>
+		<conditions>scene_forest3 &amp; !bool_follow_girl</conditions>
+		<notes>Rentre à son appart.</notes>
+	</Scene>
+	<Scene id="scene_stalk">
+		<label>scene_stalk</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>815 844</htmlCoordinates>
+		<conditions>scene_forest3 &amp; bool_follow_girl</conditions>
+		<notes>Suit la jeune fille jusqu'à chez elle.</notes>
 	</Scene>
 	<Bool id="bool_follow_girl">
 		<label>bool_follow_girl</label>
