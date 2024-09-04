@@ -1,3 +1,5 @@
+var oldBoolLabel = "";
+
 function newBool() {
     var parents = document.getElementsByName("boolParent")[0].value;
     var label = document.getElementsByName("boolName")[0].value;
@@ -18,6 +20,7 @@ function newBool() {
     let graphDiv = document.getElementById("graphDiv");
     graphDiv.insertAdjacentHTML('beforeend', bool.generateHtml());
 
+    oldBoolLabel = label;
     
     // Add to graph structure
     boolGraph[label] = bool;
@@ -34,30 +37,38 @@ function fillBoolForm(label) {
     
     document.getElementsByName("boolParent")[0].value = bool.parentScene;
     document.getElementsByName("boolName")[0].value = bool.label;
+
+    oldBoolLabel = label;
 }
 
 function updateBool() {
     var parentScene = document.getElementsByName("boolParent")[0].value;
     var label = document.getElementsByName("boolName")[0].value;
     
-    var bool = boolGraph[label];
-    if(bool == null) {
-        displayConsole("Impossible de changer le nom d'un bool pour l'instant. Recréez en un nouveau.");
-        return;
+    if(oldBoolLabel != label) {
+        if(boolGraph[label] != null) {
+            displayConsole("Le nouveau nom du label existe déjà");
+            return;
+        }
+        boolGraph[label] = boolGraph[oldBoolLabel];
+        delete boolGraph[oldBoolLabel];
     }
+    var bool = boolGraph[label];
     
     // Update in javascript graph
     bool.parentScene = parentScene;
     bool.label = label;
     
     // Update html
-    document.getElementById(bool.label).remove();
+    document.getElementById(oldBoolLabel).remove();
     let graphDiv = document.getElementById("graphDiv");
     graphDiv.insertAdjacentHTML('beforeend', bool.generateHtml());
 
     dragElement(document.getElementById(label));
     
     displayLines();
+
+    oldBoolLabel = label;
 }
 
 function removeBool() {

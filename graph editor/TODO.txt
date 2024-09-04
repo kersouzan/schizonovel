@@ -6,8 +6,6 @@ CheckErrors()
 
 --- A faire plus tard ---
 
-Modifier le nom de la scene en ajoutant un input hidden avec l'ancien label.
-
 possible rectangles de couleur pour mieux voir les arcs
 
 display lines de différentes couleurs

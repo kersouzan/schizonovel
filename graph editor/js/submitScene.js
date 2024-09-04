@@ -1,3 +1,5 @@
+var oldSceneLabel = "";
+
 function newScene() {
     var icone = document.getElementsByName("icone")[0].value;
     var label = document.getElementsByName("label")[0].value;
@@ -20,6 +22,7 @@ function newScene() {
     let graphDiv = document.getElementById("graphDiv");
     graphDiv.insertAdjacentHTML('beforeend', scene.generateHtml());
 
+    oldSceneLabel = label;
     
     // Add to graph structure
     sceneGraph[label] = scene;
@@ -39,6 +42,8 @@ function fillSceneForm(label) {
     document.getElementsByName("coordinates")[0].value = scene.coordinates;
     document.getElementsByName("conditions")[0].value = scene.conditions;
     document.getElementsByName("notes")[0].value = scene.notes;
+    
+    oldSceneLabel = label;
 }
 
 function updateScene() {
@@ -48,11 +53,15 @@ function updateScene() {
     var conditions = document.getElementsByName("conditions")[0].value;
     var notes = document.getElementsByName("notes")[0].value;
     
-    var scene = sceneGraph[label];
-    if(scene == null) {
-        displayConsole("Impossible de changer le nom d'une scène pour l'instant. Recréez en une nouvelle.");
-        return;        
+    if(oldSceneLabel != label) {
+        if(sceneGraph[label] != null) {
+            displayConsole("Le nouveau nom du label existe déjà");
+            return;
+        }
+        sceneGraph[label] = sceneGraph[oldSceneLabel];
+        delete sceneGraph[oldSceneLabel];
     }
+    var scene = sceneGraph[label];
     
     // Update in javascript graph
     scene.label = label;
@@ -61,14 +70,18 @@ function updateScene() {
     scene.conditions = conditions;
     scene.notes = notes;
     
+    console.log("old "+oldSceneLabel);
+    
     // Update html
-    document.getElementById(scene.label).remove();
+    document.getElementById(oldSceneLabel).remove();
     let graphDiv = document.getElementById("graphDiv");
     graphDiv.insertAdjacentHTML('beforeend', scene.generateHtml());
 
     dragElement(document.getElementById(label));
     
     displayLines();
+
+    oldSceneLabel = label;
 }
 
 function removeScene() {
