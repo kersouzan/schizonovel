@@ -4,7 +4,7 @@ function displayLines() {
 
     for(var key in sceneGraph) {
         var coords1 = sceneGraph[key].htmlCoordinates.split(" ");
-        var parents = sceneGraph[key].conditions.split(/[\s\(\)\&\|]+/);
+        var parents = sceneGraph[key].conditions.split(/[\s\(\)\&\|\!]+/);
         for(let i = 0; i < parents.length; i++) {
             var coords2 = [0,0];
             if(parents[i] == "root") {
@@ -16,6 +16,11 @@ function displayLines() {
             }
             if(parents[i].startsWith("scene_") && sceneGraph[parents[i]] != null) {
                 coords2 = sceneGraph[parents[i]].htmlCoordinates.split(" ");
+                svg.innerHTML += "<line x1=\""+(Number(coords1[1])+25)+"\" y1=\""+(Number(coords1[0])+25)+"\" x2=\""+(Number(coords2[1])+25)+"\" y2=\""+(Number(coords2[0])+25)+"\" style=\"stroke:red;stroke-width:2\"/>";
+                continue;
+            }
+            if(parents[i].startsWith("bool_") && boolGraph[parents[i]] != null) {
+                coords2 = boolGraph[parents[i]].htmlCoordinates.split(" ");
                 svg.innerHTML += "<line x1=\""+(Number(coords1[1])+25)+"\" y1=\""+(Number(coords1[0])+25)+"\" x2=\""+(Number(coords2[1])+25)+"\" y2=\""+(Number(coords2[0])+25)+"\" style=\"stroke:red;stroke-width:2\"/>";
                 continue;
             }
