@@ -35,7 +35,7 @@ class Scene {
         xml += "\t\t<icone>"+this.icone+"</icone>\n";
         xml += "\t\t<coordinates>"+this.coordinates+"</coordinates>\n";
         xml += "\t\t<htmlCoordinates>"+this.htmlCoordinates+"</htmlCoordinates>\n";
-        xml += "\t\t<conditions>"+escapeXml(this.conditions)+"</conditions>\n";
+        xml += "\t\t<conditions>"+encodeXml(this.conditions)+"</conditions>\n";
         xml += "\t\t<notes>"+this.notes+"</notes>\n";
         xml += "\t</Scene>\n";
         return xml;
@@ -75,7 +75,7 @@ class Scene {
         htmlCode += "<img src=\"../src/Schizonovel/game/images/places/"+this.icone+"\" width=\"75px\" height=\"75px\"/>";
         htmlCode += "<span class=\"tooltiptext\">"+this.notes+"</span>";
         htmlCode += "</div>";
-        htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
+        htmlCode += "<br><button onclick=\"fillSceneForm('"+this.label+"');\">"+this.label+"</button>";
         htmlCode += "</div>";
         return htmlCode;
     }
@@ -84,7 +84,7 @@ class Scene {
 let sceneGraph = {};
 
 class Bool {
-    constructor(parentScene, name, htmlCoordinates) {
+    constructor(parentScene, label, htmlCoordinates) {
         this.parentScene = parentScene;
         this.label = label;
         this.htmlCoordinates = htmlCoordinates;
@@ -120,7 +120,7 @@ class Bool {
         var htmlCoords = this.htmlCoordinates.split(" ");
         var htmlCode = "<div class=\"bool\" id=\""+this.label+"\" style=\"top: "+htmlCoords[0]+"px; left: "+htmlCoords[1]+"px;\">";
         htmlCode += "<div class=\"movableheader\" id=\""+this.label+"header\">Déplacer</div>";
-        htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
+        htmlCode += "<br><button onclick=\"fillBoolForm('"+this.label+"');\">"+this.label+"</button>";
         htmlCode += "</div>";
         return htmlCode;
     }

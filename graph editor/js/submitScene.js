@@ -30,7 +30,7 @@ function newScene() {
     displayLines();
 }
 
-function fillForm(label) {
+function fillSceneForm(label) {
     var scene = sceneGraph[label];
     if(scene == null) return;
     
@@ -50,7 +50,7 @@ function updateScene() {
     
     var scene = sceneGraph[label];
     if(scene == null) {
-        displayConsole("Impossible de changer le nom d'une scene pour l'instant. Recréez une nouvelle scène.");
+        displayConsole("Impossible de changer le nom d'une scène pour l'instant. Recréez en une nouvelle.");
         return;        
     }
     
@@ -80,4 +80,6 @@ function removeScene() {
     delete sceneGraph[label];
     
     var htmlDiv = document.getElementById(label).remove();
+
+    displayLines();
 }
