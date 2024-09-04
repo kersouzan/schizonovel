@@ -58,12 +58,6 @@ class Scene {
         htmlCode += "</div>";
         return htmlCode;
     }
-    
-    displayLines() {
-        // TODO analyse condition.
-        var html = "<line x1=\"0\" y1=\"0\" x2=\"300\" y2=\"200\" style=\"stroke:red;stroke-width:2\"/>";
-        return html;
-    }
 }
 
 let sceneGraph = {};
@@ -108,12 +102,6 @@ class Bool {
         htmlCode += "<br><button onclick=\"fillForm('"+this.label+"');\">"+this.label+"</button>";
         htmlCode += "</div>";
         return htmlCode;
-    }
-
-    displayLines() {
-        // TODO self to parent
-        var html = "<line x1=\"0\" y1=\"0\" x2=\"300\" y2=\"200\" style=\"stroke:red;stroke-width:2\"/>";
-        return html;
     }
 }
 

@@ -32,15 +32,12 @@ function parseXML(content) {
     var scenes = xmlDoc.getElementsByTagName("Scene");
     let graphDiv = document.getElementById("graphDiv");
     graphDiv.innerHTML = "";
-    var svg = document.getElementById("mainSvg");
-    svg.innerHTML = "";
     for(let i = 0; i < scenes.length; i++) {
         var scene = new Scene("", "", "", "", "", "");
         scene.loadFromXml(scenes[i]);
         graphDiv.insertAdjacentHTML('beforeend', scene.generateHtml());
         sceneGraph[scene.label] = scene;
         dragElement(document.getElementById(scene.label));
-        //svg.innerHTML += scene.displayLines();
     }
 
     boolGraph = {};
@@ -51,8 +48,8 @@ function parseXML(content) {
         graphDiv.insertAdjacentHTML('beforeend', bool.generateHtml());
         boolGraph[bool.label] = bool;
         dragElement(document.getElementById(bool.label));
-        //svg.innerHTML += bool.displayLines();
     }
+    displayLines();
 }
 
 function loadGraph() {

@@ -30,6 +30,8 @@ function newScene() {
     
     // Allow drag
     dragElement(document.getElementById(label));
+    
+    displayLines();
 }
 
 function fillForm(label) {
@@ -68,6 +70,8 @@ function updateScene() {
     newDiv.innerHTML = scene.generateHtml();
     displayLines(scene.label);
     dragElement(document.getElementById(label));
+    
+    displayLines();
 }
 
 function removeScene() {
