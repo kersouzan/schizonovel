@@ -24,10 +24,6 @@ function newScene() {
     // Add to graph structure
     sceneGraph[label] = scene;
     
-    // Add lines
-    var svg = document.getElementById("mainSvg");
-    svg.innerHTML += scene.displayLines();
-    
     // Allow drag
     dragElement(document.getElementById(label));
     
@@ -66,9 +62,10 @@ function updateScene() {
     scene.notes = notes;
     
     // Update html
-    var newDiv = document.getElementById(label);
-    newDiv.innerHTML = scene.generateHtml();
-    displayLines(scene.label);
+    document.getElementById(scene.label).remove();
+    let graphDiv = document.getElementById("graphDiv");
+    graphDiv.insertAdjacentHTML('beforeend', scene.generateHtml());
+
     dragElement(document.getElementById(label));
     
     displayLines();
