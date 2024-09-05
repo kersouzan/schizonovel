@@ -1,5 +1,5 @@
 Début: un ado (choix du sexe et du look).
-Iel mène des études à la fac, car iel vit seul dans un petit appart.
+Iel mène des études à la fac, iel vit seul dans un petit appart.
 Iel fume des joints.
 
 
@@ -13,7 +13,7 @@ Décompensation:
 Iel entend quelqu'un dans la rue hurler "on est des illuminés".
 
 Iel a un trip mystique, entend des gens dans la rue dire "iel est sage"
-Choix: nier l'ego (suite mystique, voit des couleurs comme sous LSD) ou continuer.
+Choix: nier l'ego (branche mystique, voit des couleurs comme sous LSD) ou continuer.
 
 
 
@@ -33,3 +33,37 @@ Idées de références:
 
 
 
+
+Idées Branches de Narration:
+Parano:
+- implants intracraniens
+- invasions ET
+- voix/réalité les gens autour de lui l'insultent quand il a le dos tourné (impossible de savoir si voix ou réalité)
+- décide d'enregistrer avec un dictaphone (rien sur la bande: est ce qu'il imagine ou bien est ce que le micro n'est pas assez puissant)
+
+
+Mystique-Esoterique:
+- décide de nier l'ego. Ce qu'il lit/films/radio/tv. Tout lui parle
+- Epreuves initiatiques à déterminer (du moins signes et interpretations des signes).
+- bool random juste avant la fin (50% de chance): suicide du personnage ou devient un dieu.
+
+
+Persecution:
+- pas de voix.
+- les gens dans la rue l'insultent. Il voit leur lèvres bouger, il et sûr que c'est réel pour lui.
+- lorsque cela se produit, il est dans un état de sidération qui fait qu'il n'est plus critique / n'arrive pas à répondre.
+- subit de la haine et a peur de terminer ses jours seul dans un océan de haine.
+- stabilisation du perso et questionnement sur la réalité et pourquoi il a imaginé tout ça.
+
+
+Société secrète:
+- 
+
+
+
+Possession:
+- pas d'idée. Demander à Azythum ce qu'il lui est arrivé.
+
+
+Errance:
+- demander à TuxZéro.
