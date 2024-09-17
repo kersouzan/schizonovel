@@ -7,5 +7,5 @@ function displayConsole(message) {
 }
 
 function checkErrors() {
-    alert("check errors !");
+    alert("check errors ! Work in progress.");
 }

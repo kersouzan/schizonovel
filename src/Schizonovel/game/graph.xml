@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<graph>
+	<Scene id="scene_notredame">
+		<label>scene_notredame</label>
+		<icone>ico_notredame.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>207 561</htmlCoordinates>
+		<conditions>root</conditions>
+		<notes>Visite de notre dame de Paris.</notes>
+	</Scene>
+	<Scene id="scene_notredame2">
+		<label>scene_notredame2</label>
+		<icone>ico_notredame.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>394 572</htmlCoordinates>
+		<conditions>scene_notredame</conditions>
+		<notes>Deuxième tableau de notre dame de Paris.</notes>
+	</Scene>
+	<Scene id="scene_forest">
+		<label>scene_forest</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>193 801</htmlCoordinates>
+		<conditions>root</conditions>
+		<notes>Ballade en forêt</notes>
+	</Scene>
+	<Scene id="scene_forest2">
+		<label>scene_forest2</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>379 834</htmlCoordinates>
+		<conditions>scene_forest</conditions>
+		<notes>Voit un renard et le photographie</notes>
+	</Scene>
+	<Scene id="scene_forest3">
+		<label>scene_forest3</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>544 717</htmlCoordinates>
+		<conditions>(scene_notredame2 &amp; scene_forest2)</conditions>
+		<notes>Retourne dans la foret pour photographier des animaux mais voit une mystérieuse jeune fille.</notes>
+	</Scene>
+	<Scene id="scene_appart">
+		<label>scene_appart</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>812 601</htmlCoordinates>
+		<conditions>scene_forest3 &amp; !bool_follow_girl</conditions>
+		<notes>Rentre à son appart.</notes>
+	</Scene>
+	<Scene id="scene_stalk">
+		<label>scene_stalk</label>
+		<icone>ico_forest.png</icone>
+		<coordinates>100 100</coordinates>
+		<htmlCoordinates>815 844</htmlCoordinates>
+		<conditions>scene_forest3 &amp; bool_follow_girl</conditions>
+		<notes>Suit la jeune fille jusqu'à chez elle.</notes>
+	</Scene>
+	<Bool id="bool_follow_girl">
+		<label>bool_follow_girl</label>
+		<parentScene>scene_forest3</parentScene>
+		<htmlCoordinates>702 716</htmlCoordinates>
+	</Bool>
+</graph>
