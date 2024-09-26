@@ -22,11 +22,11 @@ python:
             import xml.etree.ElementTree as ET
             tree = ET.parse(xmlFile)
             root = tree.getroot()
-            for country in root.findall('Scene'):
-                self.label =  = country.find('label').text
-                self.icone =  = country.find('icone').text
-                self.coordinates =  = country.find('coordinates').text
-                self.conditions =  = country.find('conditions').text
+            #for country in root.findall('Scene'):
+            #    self.label =  = country.find('label').text
+            #    self.icone =  = country.find('icone').text
+            #    self.coordinates =  = country.find('coordinates').text
+            #    self.conditions =  = country.find('conditions').text
         
         def mapDisplay(self):
             var = 2
