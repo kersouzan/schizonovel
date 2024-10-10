@@ -24,6 +24,7 @@ screen shooters():
         action Hide()
 
     frame:
+        background None
         xalign 0.02
         yalign 0.25
         xpadding 20
