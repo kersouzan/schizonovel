@@ -33,7 +33,7 @@ label scene_tuto:
 
     scene bg city
     
-    show eileen happy
+    show eileen happy at right
     
     e "Bienvenue [player_name] ! Commençons par un rapide tutoriel."
 
@@ -48,7 +48,7 @@ label scene_tuto:
     hide screen forest_map_tuto
     show screen gui_map_tuto
 
-    e "Ensuite, il y a les boutons: celui de la santé mentale (le cerveau) et celui des compétences(le calepin)."
+    e "Ensuite, il y a les boutons: celui de la santé mentale (en haut à gauche) et celui des compétences (en haut au milieu)."
 
     e "La jauge à droite du cerveau indique ta santé mentale. Si elle tombe à zéro, ce sera la fin de la partie."
     
