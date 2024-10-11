@@ -2,8 +2,6 @@ default completed = []
 
 python:
     scene_graph = []
-    bda_scene_files = {"bda1.xml", "bda2.xml", "bda3.xml"}
-    bda_scene_graph = []
     bool_graph = []
     
     class SceneDescriptor:
@@ -23,6 +21,7 @@ python:
             tree = ET.parse(xmlFile)
             root = tree.getroot()
             #for country in root.findall('Scene'):
+            #    TODO new scene to store the following:
             #    self.label =  = country.find('label').text
             #    self.icone =  = country.find('icone').text
             #    self.coordinates =  = country.find('coordinates').text
@@ -34,6 +33,7 @@ python:
     
     def completedScene(label):
         scene_graph[label].completed = True
+        #TODO Count scene for shooters
 
 
 #init python:

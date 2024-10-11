@@ -1,4 +1,6 @@
 # This file describes game tutorial.
+
+# First, the screen to show interface to the player
 screen forest_map_tuto():
     add "places/ico_forest.png" pos(1000,600)
 
@@ -25,6 +27,8 @@ screen shooters_map_tuto():
         "gui/benzo_button.png"
     ) align (0.02, 0.25)
 
+
+# Then, the tutorial itself
 label scene_tuto:
 
     scene bg city
